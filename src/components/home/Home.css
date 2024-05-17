@@ -1,0 +1,68 @@
+.start-now-section {
+  /* height: 500px; */
+  margin: 10rem 0rem 8rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  background-size: cover;
+}
+
+.start-now-section h1,
+.start-now-section h2 {
+  color: #757070;
+  /* font-size: 2.5em; */
+  margin: 0.3rem;
+}
+
+.start-now-section .buttons {
+  display: flex;
+  gap: 20px;
+  border-radius: 0.2rem;
+}
+
+.start-now-section button {
+  padding: 10px 20px;
+  /* font-size: 1em; */
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #008080;
+  cursor: pointer;
+}
+
+/* Quick Links Section */
+.quick-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.25rem;
+  /* column-gap: 7rem; */
+}
+
+.quick-links div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quick-links button {
+  width: 5.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  /* padding: 0.65rem 1.25rem; */
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  /* background-color: #70382A; */
+  background-color: #603f22;
+  cursor: pointer;
+}
+
+.quick-links button:hover {
+  background-color: #66815ab8;
+  color: #603f22;
+  font-weight: bold;
+}

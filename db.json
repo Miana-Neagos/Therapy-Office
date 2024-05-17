@@ -1,0 +1,2321 @@
+{
+  "users": [],
+  "alinaS": [
+    {
+      "id": "9750a0e2-18b2-45ed-be7c-d22e3efa323b",
+      "date": "13/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "1f2762ab-4a16-48f6-aea2-794c7177b13c",
+      "date": "14/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "ea6b95b0-4bf7-4952-bce5-0581db9f46c3",
+      "date": "15/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": false
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "e60497e8-6490-4415-ba46-e334dc18608a",
+      "date": "16/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": false
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "cfbe50b3-0354-476e-b0bb-b4800014affd",
+      "date": "17/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": false
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": false
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": false
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": false
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "f166ffe4-1a99-4c0f-b0cb-5a09cdbf6992",
+      "date": "20/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "ce4c0820-ae77-4a87-9996-10487262a42d",
+      "date": "21/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": false
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": false
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": false
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "09ed430f-b092-4b03-a1f7-30020ac7a73b",
+      "date": "22/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": false
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": false
+        }
+      ]
+    },
+    {
+      "id": "76aba072-0607-42f0-a7d1-5fc667fefae9",
+      "date": "23/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "c30abe38-97be-4c2c-aa6e-4077f5835d4e",
+      "date": "24/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "3d37b5fd-864a-443f-a1d6-8dbf6eb3e79b",
+      "date": "27/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0bb762ee-54c2-4bbc-a5cf-55de378ccb93",
+      "date": "28/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "aa36a6a3-2bb1-44d1-a0d5-bd2e601a7c26",
+      "date": "29/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "106f195b-8024-418b-a371-3309fa1ba0fd",
+      "date": "30/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": false
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "bda31a22-2c0d-4647-85c4-998be6c10414",
+      "date": "31/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "acdc0924-d66a-43b9-9b7b-76991d7d98b5",
+      "date": "03/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "5c0d602c-c5d1-4024-8923-b40bda2938ef",
+      "date": "04/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "3d6924a4-56e4-4124-980e-aaad11c1e170",
+      "date": "05/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "5f2e24c5-3bfb-4587-b6f9-fb182f724ff8",
+      "date": "06/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "9bd958ce-821f-448d-85c0-7a9b769dc469",
+      "date": "07/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "63c71036-67a9-41fe-bf2a-c8cf9c06c1a7",
+      "date": "10/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "f70e6425-a630-43be-ba9d-6389557762cd",
+      "date": "11/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0e9afb65-8bf6-47ac-900b-18242088a40f",
+      "date": "12/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0c5cc512-8f51-418a-a548-e629967d8f98",
+      "date": "13/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "d37a90fa-f976-45ac-af38-47ff96a60e3a",
+      "date": "14/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "09eea5c1-a43a-43b3-b600-0d4d92193bc8",
+      "date": "17/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "82084ef2-ca65-463c-b326-f88b0a936df5",
+      "date": "18/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "cc0d0c55-f7f4-4753-bef4-2b2d20941628",
+      "date": "19/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "635a0331-2bc0-4f07-81d1-6a528a4b6c3e",
+      "date": "20/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "6d95875a-2274-41c3-b286-953cef51f750",
+      "date": "21/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "e662e3a2-ba9b-4421-a69b-a715d0d7e9ca",
+      "date": "24/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "91f33b40-db1e-48a7-b66b-f41462e79c1f",
+      "date": "25/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "a174e3f3-8dd7-4eb9-92b4-df575d43c791",
+      "date": "26/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "9678c5f7-0c37-41ac-9f0c-076088ce4619",
+      "date": "27/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "b3e048ae-37d3-411f-b5c7-65b2cae5c569",
+      "date": "28/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "357a125f-4a17-4154-9ba7-58317311ca2a",
+      "date": "01/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "b54df888-95ff-4fe1-a7ee-0bd2805811d1",
+      "date": "02/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "8b41fba6-675f-48ec-b6c5-8408e5743243",
+      "date": "03/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "a166de9a-d9ba-4477-ac80-a20333332a03",
+      "date": "04/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "94caa7fc-0485-4c06-801e-b55fc1cf39ea",
+      "date": "05/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "a4fa9441-c524-4c71-8ad3-609196660cc1",
+      "date": "08/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "4c3117bc-4646-4b50-a04f-26e3fcb9c268",
+      "date": "09/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "efecf23b-5644-4c74-9881-a292d6951e2c",
+      "date": "10/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "9248e22b-c638-4daf-a67b-59e3a7b649b6",
+      "date": "11/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0ed9bc05-d163-4d42-9109-1ea56caa982b",
+      "date": "12/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14:30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    }
+  ],
+  "andraC": [
+    {
+      "id": "7ba39a38-57cf-45c2-9825-6bd436e006fb",
+      "date": "14/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "84071f8c-d4c9-49c6-8856-50d6a5f5527d",
+      "date": "15/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "fa71a02a-4a67-4baf-bfb6-ce93bfcbc718",
+      "date": "16/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "a8a287f7-b775-4d8c-ad1b-9b0c46a08fe8",
+      "date": "17/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": false
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0c227157-4009-46c4-8ca7-4a1d7e5e6d5f",
+      "date": "20/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "3621f90a-885d-474f-8d38-f4470657f514",
+      "date": "21/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "807b6193-6d45-4164-becc-ed4cf8db4962",
+      "date": "22/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "f1459905-8167-4758-b41b-17d3f26ddd1b",
+      "date": "23/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "cb73fb2b-f2c2-484a-a4e3-a6b22f2e45c2",
+      "date": "24/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "80ebc6c3-f721-4e5c-b8d4-cb14628169ca",
+      "date": "27/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "c1768580-dffe-4a3a-8349-8d43a98eef9b",
+      "date": "28/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "71a72541-d779-49c0-b6c7-5c060cfacffe",
+      "date": "29/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "2ed6359d-3752-4098-9513-2efa3cb71768",
+      "date": "30/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "f1238e2b-55b0-4eda-9896-9ac04d0937bc",
+      "date": "31/05/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "34f3e709-8bf9-43b1-a0c2-3473423dcd1a",
+      "date": "03/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "013661dd-239a-4de7-87ee-57130e01e7c1",
+      "date": "04/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "bea760a5-4010-470f-9d54-d85024943605",
+      "date": "05/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "351ca2d9-2d7f-4ca9-9a80-ea0a83af5d67",
+      "date": "06/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "db09cd3e-9e54-4ead-96e0-0f8898a87dc5",
+      "date": "07/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "4f090cfc-bc91-485b-90ee-ae574d7d2c04",
+      "date": "10/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "9cf35889-6116-4a34-aae6-71f463efb774",
+      "date": "11/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "06245e28-cfdb-49cf-8b85-65968f677a90",
+      "date": "12/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "f11ee7fb-3252-485c-ba9f-c5699c84b036",
+      "date": "13/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "621226cd-4bcd-4dfa-875f-0da18433dc8b",
+      "date": "14/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "60bbec3c-b3ac-40aa-bca8-83dd06795e17",
+      "date": "17/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "43b65ce7-f4d4-4078-a341-56ca77b33cad",
+      "date": "18/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "3d32d3fe-0771-4f43-bff5-0428e15ef621",
+      "date": "19/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "07a14b45-2497-4149-97a9-0880f143536a",
+      "date": "20/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "31cb1359-649c-4915-8d56-448f5cfe826e",
+      "date": "21/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "0d1ddaa0-7472-4404-97d0-2dd66db22b23",
+      "date": "24/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "b6aa29b8-6c88-4954-8548-f6be896df56c",
+      "date": "25/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "cc804ceb-45f0-49e4-8c48-d1d288aa58b5",
+      "date": "26/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "7678e97e-b1d7-496c-8dc9-1f8c5c1acefc",
+      "date": "27/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "e4741395-fbb5-4f0b-8884-361ed56593bb",
+      "date": "28/06/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "5a8857a0-2b98-40af-94b4-f9a23ee6208e",
+      "date": "01/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "12664e62-23a3-4db9-9739-3cef415a9cb3",
+      "date": "02/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "2bfa3593-63b2-487c-be75-ca695109de4a",
+      "date": "03/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "9200fbf0-5555-458a-ad8c-eed4b50175cc",
+      "date": "04/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "68d7b4de-9556-46d9-b427-136b194d68c5",
+      "date": "05/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "3911a436-a867-4ee0-a1bf-5df97d251be4",
+      "date": "08/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "17b8a006-8443-412c-8964-70198b90b133",
+      "date": "09/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "fa13c51f-3a56-4298-8eac-dff4746af548",
+      "date": "10/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "28dac1a9-43d4-471a-9605-c8a304e03b1c",
+      "date": "11/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "745c8f21-6550-48e1-81cd-b004dc156ec3",
+      "date": "12/07/2024",
+      "slots": [
+        {
+          "time": "10:00 - 11:00",
+          "available": true
+        },
+        {
+          "time": "11:00 - 12:00",
+          "available": true
+        },
+        {
+          "time": "12:00 - 13:00",
+          "available": true
+        },
+        {
+          "time": "14.30 - 15:30",
+          "available": true
+        },
+        {
+          "time": "15:30 - 16:30",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

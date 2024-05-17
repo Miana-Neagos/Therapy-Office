@@ -1,0 +1,55 @@
+.hours-of-operation {
+  background-color: #b9b7b69c;
+  padding: 20px;
+  border-radius: 10px;
+  color: #5A3421;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 35vw; 
+  max-width: min-content; 
+}
+
+.hours-of-operation h3 {
+  text-align: center;
+  margin: 0rem;
+}
+
+.hours-of-operation table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.hours-of-operation tbody {
+  width: 100%;
+  text-align: left;
+  margin-top: 0.4rem;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  flex-direction: row;
+}
+
+.hours-of-operation td {
+  flex: 1;
+  padding: 5px;
+  border-right: 1px solid;
+  font-weight: bolder;
+}
+
+.hours-of-operation tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weekday {
+  font-weight: bold;
+}
+
+/* .hours-of-operation tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1); 
+  background-color: darkgray;
+} */
