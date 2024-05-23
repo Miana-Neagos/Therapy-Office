@@ -8,10 +8,10 @@ function MusicPlayer() {
 
   function togglePlay(){
     if (isPlaying) {
-      // stop YT playlist
+      // Stop the YouTube playlist
       playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E";
     } else {
-      // play YT playlist
+      // Play the YouTube playlist
       playerRef.current.src += "?autoplay=1";
     }
     setIsPlaying(!isPlaying);
@@ -24,8 +24,9 @@ function MusicPlayer() {
       <p>Take a moment to reflect on your thoughts and emotions.</p>
       <p>Whether joy, stress, or something in between, acknowledging your feelings is the first step towards understanding yourself better.</p>
       <p>Immerse yourself in meditation music and explore your thoughts.</p>
+      {/* Add onClick event handler to call togglePlay when button is clicked */}
       <button className="play-button" onClick={togglePlay}>{isPlaying ? "Stop" : "Play"}</button>
-      {/* embedded YT playlist */}
+      {/* Embed YouTube playlist */}
       <iframe 
         ref={playerRef}
         width="0" 

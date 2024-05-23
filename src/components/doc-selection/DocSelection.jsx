@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import alina from "../../assets/pic3.jpg";
 import andra from "../../assets/pic3.jpg";
@@ -6,27 +5,31 @@ import "./DocSelection.css";
 
 function DocSelection() {
   const navigate = useNavigate();
-  const [selectedTherapist, setSelectedTherapist] = useState(null);
 
-  function pickDoc(therapist) {
-    setSelectedTherapist(therapist);
-    navigate("/booking", { state: { therapist } });
+  // created in case therapist list becomes bigger
+  const therapists = [
+    {id: 'alinaS', name: 'Alina Salomie', img: alina},
+    {id: 'andraC', name: 'Andra Costin', img: andra}
+  ]
+
+  function pickDoc(therapistId) {
+    console.log('This is DOC SELECTION');
+    console.log({ therapistId });
+    navigate(`/booking/${therapistId}`);
   }
 
   return (
     <div className="therapist-selection-container">
-      <p className={`select-doc-p ${!selectedTherapist ? '' : 'hidden'}`}>Choose your therapist:</p>
+      <p className="select-doc-p">Choose your therapist:</p>
 
       <div className="therapist-selection">
-        <button className="therapist-option" onClick={() => pickDoc('alinaS')}>
-          <img id='alinaS' src={alina} alt="Salomie Alina" />
-          <span> Alina Salomie </span>
-        </button>
-        
-        <button className="therapist-option" onClick={() => pickDoc('andraC')}>
-          <img id='andraC' src={andra} alt="Costin Andra" />
-          <span> Andra Petre </span>
-        </button>
+        {therapists.map(({id, name, img}) => (
+          // eslint-disable-next-line react/jsx-key
+          <button key={id} className='therapist-option' onClick={() => pickDoc(id)}>
+            <img id={id} src={img} alt={name}/>
+          <span> {name} </span>
+          </button>
+        ))}
       </div>
     </div>
   );

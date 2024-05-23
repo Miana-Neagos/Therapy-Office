@@ -4,7 +4,7 @@ import './test.css'
 function Schedule() {
   return (
     <div className="hours-of-operation">
-      <h4>Working Hours</h4>
+      <h3>Working Hours</h3>
       <table>
         <tbody>
           <tr><td className='weekday'>Monday</td><td>9:00 am - 5:00 pm</td></tr>

@@ -13,7 +13,7 @@
 
 .hours-of-operation h4 {
     text-align: center;
-    margin: 0rem;
+    margin: 1.3rem;
 }
 
 .hours-of-operation table {
@@ -22,7 +22,7 @@
 }
 
 .hours-of-operation tbody {
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center; 

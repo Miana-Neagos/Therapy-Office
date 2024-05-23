@@ -12,20 +12,23 @@
   background-image: radial-gradient(circle, #537a8d 15%, transparent 1%);
   background-size: 10px 10px;
   background-repeat: repeat;
+  margin: 4rem auto;
 }
 
 .player-content {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  /* font-size: 1rem; */
+  /* flex-wrap: nowrap; */
   flex-direction: column;
   justify-content: center;
   background-color: #f9f9f9;
   padding: 0.3rem;
   border-radius: 1rem;
-  max-width: 88%;
-  max-height: 75%;
+  width: 88%;
+  height: 65%;
   /* overflow: none; */
+  text-align: center;
 }
 
 .music-player-container h3 {
@@ -36,7 +39,7 @@
 .music-player-container p {
   margin: 0rem 0rem 0.2rem 0rem;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #928f8f;
 }
 
@@ -46,7 +49,7 @@
 
 .play-button {
   background-color: #e3e6e4;
-  color: #7a7174;
+  color: #7A7174;
   border: 2px solid #ffac00a3;
   border-radius: 2rem;
   padding: 8px 15px;
@@ -57,12 +60,7 @@
   margin: 0.7rem;
   max-width: 30%;
   max-height: 25%;
-  background-image: linear-gradient(
-    to bottom,
-    #e3e6e4 0%,
-    #b2b6b4 50%,
-    #e3e6e4 100%
-  );
+  background-image: linear-gradient(to bottom, #e3e6e4 0%, #b2b6b4 50%, #e3e6e4 100%);
 }
 
 .play-button:hover {

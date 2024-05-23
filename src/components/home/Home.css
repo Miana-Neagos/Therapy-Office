@@ -11,7 +11,8 @@
 }
 
 .start-now-section h1,
-.start-now-section h2 {
+.start-now-section h2
+{
   color: #757070;
   /* font-size: 2.5em; */
   margin: 0.3rem;
@@ -34,11 +35,18 @@
 }
 
 /* Quick Links Section */
-.quick-links {
+/* .quick-links {
   display: flex;
   justify-content: space-evenly;
   padding: 1.25rem;
-  /* column-gap: 7rem; */
+  /* column-gap: 7rem; 
+} */
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  column-gap: 8rem;
 }
 
 .quick-links div {

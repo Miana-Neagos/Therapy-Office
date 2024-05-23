@@ -1,41 +1,70 @@
-import { useState, useEffect } from "react";
+/*------------------------------------- FINAL VERSION USING useParams()    -------------------------------*/
+import { useContext, useState, useEffect } from "react";
 import "./NEWBooking.css";
-import DocSelection from "../doc-selection/DocSelection";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import DateTimeSelector from "../datetime-selector/DateTimeSelector";
+import { AuthContext } from "../../App";
 
- function BookingForm() {
-  const location = useLocation();
-  const { therapist } = location.state || {};
+//from DocSelection the user navigates to Booking Form and send therapist name as parameter in the URL
+export default function ManageBooking() {
+  console.log('This is NEW BOOKING');
+  const { auth } = useContext(AuthContext);
+  const { therapist } = useParams(); // accessing the booking URL param to catch "therapist"
   const [selectedDate, setSelectedDate] = useState(undefined);
-  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedTime, setSelectedTime] = useState(undefined);
   const [availableSlots, setAvailableSlots] = useState([]);
-  const [selectedTherapist, setSelectedTherapist] = useState(therapist || ""); 
 
   useEffect(() => {
-    if (selectedTherapist) {
-      fetch(`http://localhost:3000/${selectedTherapist}`)
+    if (therapist) {
+      fetch(`http://localhost:3000/${therapist}`)
         .then(response => response.json())
         .then(data => {
           setAvailableSlots(data);
         })
         .catch(error => console.error("Fetch error:", error));
     }
-  }, [selectedTherapist]);
+  }, [therapist]);
 
-  function handleDateAndTimeSelect(date, time) {
+  function dateTimeSelection(date, time) {
+    console.log('This is DATE TIME SELECTION');
+    // console.log({date});
+    // console.log({time});
     setSelectedDate(date);
     setSelectedTime(time);
   }
 
-  function handleSubmit(event) {
+  console.log({
+    therapist,
+    availableSlots,
+    selectedDate,
+    selectedTime
+  });
+
+  function bookingSubmit(event) {
+    console.log('This is the SUBMIT from Booking');
     event.preventDefault();
 
-    const selectedDay = availableSlots.find(slot => slot.date === selectedDate);
+    if (!selectedDate || !selectedTime) {
+      // console.error("Both selected date and time must be provided.");
+      return;
+    }
+    // console.log({selectedDate});
+    // console.log({selectedTime});
+    // console.log({event});
+
+    // checking if user is authenticated --> no booking can be made if user does not have an account or is not logged in
+    if (!auth) {
+      console.error("Must have user account or be logged in to book appointment.");
+      return;
+    }
+
+    const selectedDay = availableSlots.find(elem => elem.date === selectedDate);
+    // console.log({selectedDay});
     const selectedSlot = selectedDay.slots.find(slot => slot.time === selectedTime);
+    // console.log({selectedSlot});
     selectedSlot.available = false;
 
-    fetch(`http://localhost:3000/${selectedTherapist}/${selectedDay.id}`, {
+    fetch(`http://localhost:3000/${therapist}/${selectedDay.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +73,8 @@ import DateTimeSelector from "../datetime-selector/DateTimeSelector";
     })
       .then(() => {
         setSelectedDate(undefined);
-        setSelectedTime("");
+        setSelectedTime(undefined);
+        console.log('yey');
       })
       .catch(error => {
         console.error("Fetch failed:", error);
@@ -55,32 +85,28 @@ import DateTimeSelector from "../datetime-selector/DateTimeSelector";
     <div className="booking-container">
       <h2>Book & Manage Appointments</h2>
       <h3>Find the suitable date & time for your next appointment</h3>
-      {selectedTherapist ? (<p>Selected Therapist: {selectedTherapist === 'alinaS' ? 'Alina Salomie' : 'Andra Costin'}</p>
+      {therapist ? (<p>Selected therapist :  {therapist === 'alinaS' ? 'Alina Salomie' : 'Andra Costin'}</p>
       ) : (<p>No therapist selected.</p>)}
 
-      <form className="booking-form-time" onSubmit={handleSubmit}>
-        {!selectedTherapist ? (
-          <DocSelection onSelectTherapist={setSelectedTherapist} />
-        ) : (
-          <>
-            <DateTimeSelector
-            //   selectedTherapist={selectedTherapist}
-              availableSlots={availableSlots}
-              onSelect={handleDateAndTimeSelect}
-            />
-            <div>
-              <p className="selection">
-                Selected date {selectedDate} & time {selectedTime}
-              </p>
-              <button type="submit" className="submit-btn" disabled={!selectedTherapist || !selectedTime}>
-                Book Appointment
-              </button>
-            </div>
-          </>
-        )}
-      </form>
+      {therapist && (
+        <form className="booking-form-time" onSubmit={bookingSubmit}>
+          <DateTimeSelector
+            availableSlots={availableSlots}
+            onSelect={dateTimeSelection}
+          />
+          <div>
+            <p className="selection">
+              Selected date {selectedDate} & time {selectedTime}
+            </p>
+            <button 
+              type="submit" 
+              className="submit-btn"
+              // button disabled, no booking can be made if user does not have an account or is not logged in
+              disabled={!auth} 
+              >{auth ? "Book Appointment" : "Sign in to book appointment"}</button>
+          </div>
+        </form>
+      )}
     </div>
   );
 }
-
-export default BookingForm;

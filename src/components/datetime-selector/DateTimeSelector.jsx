@@ -5,23 +5,20 @@ import "react-calendar/dist/Calendar.css";
 import { FaRegHandPointLeft } from "react-icons/fa6";
 import PropTypes from "prop-types";
 
-export default function DateTimeSelector({ availableSlots, onSelect }) {
-  console.log({availableSlots});
-  console.log({onSelect});
+function DateTimeSelector({ availableSlots, onSelect }) {
+  // console.log({availableSlots});
+  // console.log({onSelect});
   const [selectedDate, setSelectedDate] = useState(undefined);
-  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedTime, setSelectedTime] = useState(undefined);
 
   const selectedDateString = selectedDate ? selectedDate.toLocaleDateString("en-GB") : null;
+  // console.log({selectedDate});
+  // console.log({selectedDateString});
   const availableTimeSlots = availableSlots.find((slot) => slot.date === selectedDateString)?.slots || [];
 
-  function handleDateChange(date) {
+  function dateSelection(date) {
     setSelectedDate(date);
     setSelectedTime("");
-  }
-
-  function handleTimeChange(event, time) {
-    event.preventDefault();
-    setSelectedTime(time === selectedTime ? "" : time);
   }
 
   useEffect(() => {
@@ -31,17 +28,16 @@ export default function DateTimeSelector({ availableSlots, onSelect }) {
   return (
     <div className="calendar-and-slots-container">
       <div className="calendar-container">
-        <Calendar onChange={handleDateChange} value={selectedDate} className="select" />
+        <Calendar onChange={dateSelection} value={selectedDate} className="select" />
       </div>
       <div className="time-slot-container">
-        {selectedDateString ? (
+      {selectedDateString ? (
           <div className="time-slot-buttons">
             {availableTimeSlots.map((slot, index) => (
               <button
-                key={`${selectedDateString}-${index}`}
-                value={slot.time}
+                key={index}
                 disabled={!slot.available}
-                onClick={(event) => handleTimeChange(event, slot.time)}
+                onClick={() => setSelectedTime(slot.time)}
               >
                 {slot.time}
               </button>
@@ -59,7 +55,8 @@ export default function DateTimeSelector({ availableSlots, onSelect }) {
 }
 
 DateTimeSelector.propTypes = {
-  // selectedTherapist: PropTypes.string.isRequired,
   availableSlots: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
 };
+
+export default DateTimeSelector;
