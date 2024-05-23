@@ -1,6 +1,6 @@
 /* SDK VERSION */
 import { useState } from "react";
-import validateForm from "../../data-validation"
+import validateForm from "../lib/data-validation"
 import "./ContactForm.css";
 import emailjs from '@emailjs/browser';
 

@@ -33,7 +33,7 @@ export class doc2SlotGenerator {
   
     generateTimeSlots() {
         const timeSlotsArr = [];
-        const startDate = new Date(); // start from today
+        const startDate = new Date(); // start from today, 13.05
         const endDate = new Date();
         endDate.setMonth(startDate.getMonth() + 2); // end date is 2 months from today
   
