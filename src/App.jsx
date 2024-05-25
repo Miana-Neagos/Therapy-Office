@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ManageBooking from "./components/booking/WIP-Booking";
-// import ManageBooking from "./components/booking/Booking";
+// import ManageBooking from "./components/booking/Booking"
 import DocSelection from "./components/doc-selection/DocSelection";
 import Home from "./components/home/Home";
 import LoginRegister from "./components/login-register/SignIn-SignUp";
@@ -11,6 +11,7 @@ import AboutUs from "./components/about-us/AboutUs";
 import Services from "./components/services/Services";
 import NavBar from "./components/nav-bar/NavBar";
 import { fetchAppointments, fetchAvailableDates } from "./components/lib/booking-context";
+import Faq from "./components/faq/Faq";
 
 export const AuthContext = React.createContext();
 export const BookingContext = React.createContext();
@@ -51,6 +52,7 @@ function App() {
                     <Route path="/booking/:therapist" element={<ManageBooking />}></Route>
                   <Route path="/about-us" element={<AboutUs />}></Route>
                   <Route path="/services" element={<Services />}></Route>
+                  <Route path="/faq" element={<Faq />}></Route>
                 </Routes>
               </BrowserRouter>
             </BookingContext.Provider>

@@ -6,28 +6,20 @@ import { FaRegHandPointLeft } from "react-icons/fa6";
 import PropTypes from "prop-types";
 
 // receiving "availableSlots/therapist to further use in the UI for creating time slot buttons"
-// "onSelect" allows the DateTimeSelector to communicate the selected date and time back to its parent component(ManageBooking)
+// "onSelect" is a callback that allows the DateTimeSelector to communicate 
+// the selected date and time back to its parent component(BookingForm)
 
 function DateTimeSelector({ availableSlots, onSelect }) {
   console.log('This is DATE TIME SELECTOR');
   console.log({availableSlots});
-  console.log({onSelect});
+  // console.log({onSelect});
   const [selectedDate, setSelectedDate] = useState(undefined);
   const [selectedTime, setSelectedTime] = useState(undefined);
-  const [slots, setSlots] = useState([]);
-
-  useEffect(() => {
-    if (availableSlots) {
-      setSlots(availableSlots);
-    }
-  }, [availableSlots]);
-
-  console.log({slots});
 
   const selectedDateString = selectedDate ? selectedDate.toLocaleDateString("en-GB") : null;
   // console.log({selectedDate});
   // console.log({selectedDateString});
-  const availableTimeSlots = (slots || []).find(slot => slot.date === selectedDateString)?.slots || [];
+  const availableTimeSlots = (availableSlots || []).find(slot => slot.date === selectedDateString)?.slots || [];
 
   function dateSelection(date) {
     // updating the selected date and resetting the selected time -> new date is selected & previously selected time is cleared
@@ -51,15 +43,19 @@ function DateTimeSelector({ availableSlots, onSelect }) {
   return (
     <div className="calendar-and-slots-container">
       <div className="calendar-container">
+      {/* "react-calendar" package is designed to handle date selection and to pass the selected date 
+      to the function specified in the onChange prop -> this is implemented within the react-calendar package itself */}
         <Calendar onChange={dateSelection} 
+        // "value prop" to synchronize its internal state with the component's state, 
+        // ensuring consistent display and behavior for the selected date.
         value={selectedDate} 
         className="select" />
       </div>
       <div className="time-slot-container">
           <div className="time-slot-buttons">
-            {selectedDateString && availableTimeSlots.map((slot, index) => (
+            {selectedDateString && availableTimeSlots.map((slot, id) => (
               <button
-                key={index}
+                key={id}
                 disabled={!slot.available}
                 onClick={() => setSelectedTime(slot.time)}
               >
@@ -85,3 +81,40 @@ DateTimeSelector.propTypes = {
 };
 
 export default DateTimeSelector;
+
+
+
+  // function timeSlotChoice(event, time) {
+  //   event.preventDefault();
+  //   setSelectedTime(time === selectedTime ? "" : time);
+  // }
+
+
+  // return (
+  //   <div className="calendar-and-slots-container">
+  //     <div className="calendar-container">
+  //       <Calendar onChange={dateSelection} value={selectedDate} className="select" />
+  //     </div>
+  //     <div className="time-slot-container">
+  //       {selectedDateString ? (
+  //         <div className="time-slot-buttons">
+  //           {availableTimeSlots.map((slot, index) => (
+  //             <button
+  //               key={`${selectedDateString}-${index}`}
+  //               value={slot.time}
+  //               disabled={!slot.available}
+  //               onClick={(event) => timeSlotChoice(event, slot.time)}
+  //             >
+  //               {slot.time}
+  //             </button>
+  //           ))}
+  //         </div>
+  //       ) : (
+  //         <div className="instruction">
+  //           <FaRegHandPointLeft size={55} color="#8bc2c4" />
+  //           <p>Pick a date from the calendar to view availabilities.</p>
+  //         </div>
+  //       )}
+  //     </div>
+  //   </div>
+  // );

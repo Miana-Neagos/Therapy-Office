@@ -16,16 +16,13 @@ export default function ManageBooking() {
   const [selectedTime, setSelectedTime] = useState(undefined);
   const { availableDates } = useContext(BookingContext);
   const [docSlots, setDocSlots] = useState([]);
-  console.log({ availableDates });
+  console.log(availableDates[therapist]);
 
   useEffect(() => {
     console.log('USE EFFECT triggered', { therapist, availableDates });
-    if (therapist && availableDates && availableDates[therapist]) {
-      console.log('Setting docSlots:', availableDates[therapist]);
-      const latestDocSlots = therapist && availableDates ? availableDates[therapist] : [];
-      console.log({latestDocSlots});
-      setDocSlots(latestDocSlots); }
-
+    if (therapist && availableDates[therapist]) { // Ensure therapist and availableDates[therapist] are defined
+      setDocSlots(availableDates[therapist]);
+    }
   }, [therapist, availableDates]);
 
   console.log({ docSlots });
@@ -40,12 +37,12 @@ export default function ManageBooking() {
     setSelectedTime(time);
   }
 
-//   console.log({
-//     therapist,
-//     availableSlots,
-//     selectedDate,
-//     selectedTime
-//   });
+  console.log({
+    therapist,
+    docSlots,
+    selectedDate,
+    selectedTime
+  });
 
   // function below is not usable at the time as UserBooking component is not usable yet due to the issue in sending "docSlots" to DateTimeSelector component - import is deactivated
   // also, onSubmit of the form will not trigger the same "changeBooking" function passed to bookingSubmit for same above reason
@@ -82,8 +79,8 @@ export default function ManageBooking() {
     console.log('This is the SUBMIT from Booking');
     event.preventDefault();
 
-    // checking if user is authenticated and noth date & time slot are selected, otherwise no-go
-    if (!selectedDate || !selectedTime || auth) {
+    // checking if user is authenticated and both date & time slot are selected, otherwise no-go
+    if (!selectedDate || !selectedTime || !auth) {
       // console.error("Must have user account or be logged in to book appointment.");
       // console.error("Both selected date and time must be provided.");
       return;
@@ -112,11 +109,12 @@ export default function ManageBooking() {
       
       {/* <UserBooking therapist={therapist} onchange={changeBooking}/> */}
 
-      {therapist && docSlots !== undefined && ( // need docSlots to be defined & contain data before rendering
+      {/* {therapist && docSlots !== undefined && ( // need docSlots to be defined & contain data before rendering */}
         <form className="booking-form-time" onSubmit={bookingSubmit}>
+        {/* {docSlots.length > 0 && ( */}
           <DateTimeSelector
             availableSlots={docSlots}
-            onSelect={dateTimeSelection}
+          onSelect={dateTimeSelection}
           />
           <div>
             <p className="selection">
@@ -130,7 +128,6 @@ export default function ManageBooking() {
               >{auth ? "Book Appointment" : "Sign in to book appointment"}</button>
           </div>
         </form>
-      )}
     </div>
   );
 }

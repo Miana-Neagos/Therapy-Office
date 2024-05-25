@@ -31,7 +31,7 @@ function NavBar() {
 
   return (
     <>
-      <IconContext.Provider value={{ size: "1.1rem", color: "white"}}>
+      <IconContext.Provider value={{ size: "1.5rem", color: "white"}}>
         <nav className="navbar">
           <div className="navbar-container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>

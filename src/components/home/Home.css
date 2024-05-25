@@ -1,5 +1,5 @@
 .start-now-section {
-  width: 62%;
+  /* width: 62%; */
   margin: 10rem auto;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   text-align: center;
   background-color: white;
   opacity: 0.7;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .start-now-section h1,
@@ -35,45 +35,4 @@
   color: white;
   background-color: #008080;
   cursor: pointer;
-}
-
-/* Quick Links Section */
-/* .quick-links {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1.25rem;
-  /* column-gap: 7rem; 
-} */
-
-.quick-links {
-  display: flex;
-  justify-content: center;
-  padding: 1.25rem;
-  column-gap: 8rem;
-}
-
-.quick-links div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.quick-links button {
-  width: 8rem;
-  height: 3rem;
-  margin-top: 0.5rem;
-  /* padding: 0.65rem 1.25rem; */
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-  /* background-color: #70382A; */
-  background-color: #603f22;
-  cursor: pointer;
-}
-
-.quick-links button:hover {
-  background-color: #66815ab8;
-  color: #603f22;
-  font-weight: bold;
 }

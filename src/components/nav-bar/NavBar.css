@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   position: sticky;
   top: 0;
   z-index: 1;
@@ -43,6 +43,7 @@
 
 .navbar-logo p {
   padding-left: 0.6rem;
+  font-size: 1.5rem;
 }
 
 .short-menu {
@@ -72,6 +73,7 @@
   text-decoration: none;
   padding-left: 0.3rem;
   height: 100%;
+  font-size: 1.5rem;
 }
 
 .nav-links-mobile {
@@ -139,14 +141,6 @@
 
   .nav-item {
     height: 60px;
-  }
-
-  .nav-links {
-    text-align: center;
-    padding: 0.8rem;
-    width: 100%;
-    display: table;
-    font-size: 0.9rem;
   }
 
   /* #nav-links-icon {

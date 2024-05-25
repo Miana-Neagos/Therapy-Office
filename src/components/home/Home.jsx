@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import Schedule from "../schedule/Schedule";
 import MPlayer from "../how-are-you/MPlayer";
 import "./Home.css"; // Import HomePage CSS
-import { IconContext } from "react-icons";
-import { FaRegCalendarAlt, FaQuestionCircle, FaInfoCircle, FaBook,} from "react-icons/fa";
+// import { IconContext } from "react-icons";
+// import { FaRegCalendarAlt, FaQuestionCircle, FaInfoCircle, FaBook,} from "react-icons/fa";
 import ContactForm from "../contact-form/ContactForm";
+import QuickLinks from "../quick-links-home/QuickLinks";
 
 function HomePage() {
   return (
@@ -29,7 +30,7 @@ function HomePage() {
             </Link>
           </div>
         </div>
-        <div className="quick-links">
+        {/* <div className="quick-links">
           <IconContext.Provider value={{ size: "2em" }}>
             <div>
               <FaBook />
@@ -56,7 +57,8 @@ function HomePage() {
               </Link>
             </div>
           </IconContext.Provider>
-        </div>
+        </div> */}
+        <QuickLinks />
         <MPlayer />
         <Schedule />
         <ContactForm /> 

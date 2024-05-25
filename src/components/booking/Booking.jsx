@@ -2,12 +2,12 @@
 import { useContext, useState, useEffect } from "react";
 import "./Booking.css";
 import { useParams } from "react-router-dom";
-import DateTimeSelector from "../datetime-selector/DateTimeSelector";
+import OldDateTimeSelector from "../datetime-selector/OldDateTimeSelector";
 import { AuthContext } from "../../App";
 
 //from DocSelection the user navigates to Booking Form and send therapist name as parameter in the URL
 export default function ManageBooking() {
-  console.log('This is BOOKING');
+  console.log('This is OLD BOOKING');
   const { auth } = useContext(AuthContext);
   const { therapist } = useParams(); // accessing the booking URL param to catch "therapist"
   const [selectedDate, setSelectedDate] = useState(undefined);
@@ -15,10 +15,12 @@ export default function ManageBooking() {
   const [availableSlots, setAvailableSlots] = useState([]);
 
   useEffect(() => {
+    console.log('USE EFFECT');
     if (therapist) {
       fetch(`http://localhost:3000/${therapist}`)
         .then(response => response.json())
         .then(data => {
+          console.log({data});
           setAvailableSlots(data);
         })
         .catch(error => console.error("Fetch error:", error));
@@ -90,7 +92,7 @@ export default function ManageBooking() {
 
       {therapist && (
         <form className="booking-form-time" onSubmit={bookingSubmit}>
-          <DateTimeSelector
+          <OldDateTimeSelector
             availableSlots={availableSlots}
             onSelect={dateTimeSelection}
           />

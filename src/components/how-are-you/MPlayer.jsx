@@ -20,7 +20,7 @@ function MusicPlayer() {
   return (
     <div className="music-player-container">
       <div className="player-content">
-      <h3>HOW ARE YOU TODAY?</h3>
+      <h2>HOW ARE YOU TODAY?</h2>
       <p>Take a moment to reflect on your thoughts and emotions.</p>
       <p>Whether joy, stress, or something in between, acknowledging your feelings is the first step towards understanding yourself better.</p>
       <p>Immerse yourself in meditation music and explore your thoughts.</p>
