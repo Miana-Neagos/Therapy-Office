@@ -10,8 +10,8 @@ import LoginRegister from "./components/login-register/SignIn-SignUp";
 import AboutUs from "./components/about-us/AboutUs";
 import Services from "./components/services/Services";
 import NavBar from "./components/nav-bar/NavBar";
-import { fetchAppointments, fetchAvailableDates } from "./components/lib/booking-context";
 import Faq from "./components/faq/Faq";
+import { fetchAppointments, fetchAvailableDates } from "./components/lib/booking-context";
 
 export const AuthContext = React.createContext();
 export const BookingContext = React.createContext();
