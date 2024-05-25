@@ -1,6 +1,6 @@
 /*------------------------------------- FINAL VERSION USING useParams()    -------------------------------*/
 import { useContext, useState, useEffect } from "react";
-import "./NEWBooking.css";
+import "./Booking.css";
 import { useParams } from "react-router-dom";
 import DateTimeSelector from "../datetime-selector/DateTimeSelector";
 import { AuthContext } from "../../App";

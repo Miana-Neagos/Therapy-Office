@@ -48,3 +48,8 @@ export class doc2SlotGenerator {
     }
   }
 
+
+   // const alinaS = new doc1SlotGenerator;
+  // console.log(JSON.stringify(alinaS.timeSlotsData)); // Generate the JSON data
+  // const andraP = new doc2SlotGenerator;
+  // console.log(JSON.stringify(andraP.timeSlotsData)); // Generate the JSON data
