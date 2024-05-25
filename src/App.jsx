@@ -8,7 +8,7 @@ import Home from "./components/home/Home";
 import LoginRegister from "./components/login-register/SignIn-SignUp";
 import AboutUs from "./components/about-us/AboutUs";
 import Services from "./components/services/Services";
-import NavBar from "./components/nav-bar/NEWNavBar";
+import NavBar from "./components/nav-bar/NavBar";
 // import MusicPlayer from './components/how-are-you/MPlayer';
 // import {doc1SlotGenerator} from "./available-dates/available-dates"
 // import {doc2SlotGenerator} from "./available-dates/available-dates"
