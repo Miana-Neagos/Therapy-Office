@@ -1,5 +1,18 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "test@yahoo.com",
+      "password": "$2a$10$mBmlkeNmSRYSmymJPgHybuvO97v520xW.gv1SgBjHttsxrP3NCI16",
+      "name": "test1",
+      "id": 1
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$lioyXB7IsOzffSmQq6jo7uiq3uJpPxaMuQcZzhJEpJuiBNVT/1hmu",
+      "name": "test3",
+      "id": 2
+    }
+  ],
   "alinaS": [
     {
       "id": "9750a0e2-18b2-45ed-be7c-d22e3efa323b",
@@ -59,7 +72,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",
@@ -89,7 +102,7 @@
         },
         {
           "time": "11:00 - 12:00",
-          "available": false
+          "available": true
         },
         {
           "time": "12:00 - 13:00",
@@ -101,7 +114,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -111,23 +124,23 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",
-          "available": false
+          "available": true
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -163,15 +176,15 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",
-          "available": false
+          "available": true
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
@@ -179,7 +192,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -201,11 +214,11 @@
         },
         {
           "time": "14:30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -241,7 +254,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -257,7 +270,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": true
+          "available": false
         }
       ]
     },
@@ -353,7 +366,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
@@ -1257,7 +1270,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",

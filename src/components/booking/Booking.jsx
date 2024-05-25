@@ -7,7 +7,7 @@ import { AuthContext } from "../../App";
 
 //from DocSelection the user navigates to Booking Form and send therapist name as parameter in the URL
 export default function ManageBooking() {
-  console.log('This is NEW BOOKING');
+  console.log('This is BOOKING');
   const { auth } = useContext(AuthContext);
   const { therapist } = useParams(); // accessing the booking URL param to catch "therapist"
   const [selectedDate, setSelectedDate] = useState(undefined);
