@@ -16,7 +16,7 @@ function UserUpdates({ onChange }) {
   useEffect(() => {
     console.log('this is USE EFFECT');
     console.log(appointments);
-    if (auth.userId) {
+    if (appointments && auth.userId) {
       const filteredApp = appointments.filter(appt => appt.userId === Number(auth.userId));
       console.log(appointments.appt);
       console.log({filteredApp});
@@ -52,7 +52,7 @@ function UserUpdates({ onChange }) {
   return (
     <div>
       <h3>Your Future Appointments</h3>
-      {userAppointments && userAppointments.length === 0 ? (
+      {userAppointments.length === 0 ? (
         <p>You have no future appointments.</p>
       ) : (
         <ul>

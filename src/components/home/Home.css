@@ -7,10 +7,14 @@
   align-items: center;
   color: white;
   text-align: center;
+  /* border-radius: 10px; */
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* .start-now-section.transparent {
   background-color: white;
   opacity: 0.7;
-  /* border-radius: 10px; */
-}
+} */
 
 .start-now-section h1,
 .start-now-section h2
@@ -35,6 +39,7 @@
   color: white;
   background-color: #008080;
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .start-now-section button:hover {

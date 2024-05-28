@@ -99,5 +99,5 @@
 .booking-icon {
   margin: 0.5rem;
   transform: rotate(180deg);
-  animation: pulse 1.5s infinite;
+  animation: pulse 1s infinite;
 }

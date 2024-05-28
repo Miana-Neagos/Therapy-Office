@@ -26,10 +26,13 @@
   background: linear-gradient(359deg, #69635f, #c6c4c3);
   /* transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; */
   transition: transform 0.3s ease-in-out;
-  
+  box-shadow: 6px 11px 8px 0px #7d9175e6;
+  /* box-shadow: 6px 11px 8px 0px #ecbb4e61; */
 }
 
 .quick-links button:hover {
   color: #ffffff;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  /* box-shadow: 6px 11px 8px 0px #7d9175e6; */
+  box-shadow: 6px 11px 8px 0px #ecbb4e61;
 }

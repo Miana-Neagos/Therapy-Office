@@ -30,9 +30,9 @@ function App() {
 
   useEffect(() => {
     fetchAvailableDates(setAvailableDates);
-    // if (accessToken && userId) {
+    if (accessToken && userId) {
       fetchAppointments(setAppointments,accessToken, userId)
-    // }
+    }
   }, [accessToken, userId]);
 
   useEffect(() => {

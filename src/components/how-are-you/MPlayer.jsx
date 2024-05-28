@@ -1,18 +1,12 @@
-import { useRef, useState } from "react";
+import React, { useState } from "react";
+import ReactPlayer from "react-player";
 import "./MPlayer.css";
 
 function MusicPlayer() {
-  const playerRef = useRef(null);
+  // console.log("MusicPlayer component is rendered");
   const [isPlaying, setIsPlaying] = useState(false);
 
   function togglePlay() {
-    if (isPlaying) {
-      // Stop the YouTube playlist
-      playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E";
-    } else {
-      // Play the YouTube playlist
-      playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E?autoplay=1";
-    }
     setIsPlaying(!isPlaying);
   }
 
@@ -28,19 +22,74 @@ function MusicPlayer() {
         <p>Immerse yourself in meditation music and explore your thoughts.</p>
         <button className="play-button" onClick={togglePlay}>
           {isPlaying ? "Stop" : "Play"}
-          {/* <iframe
-            ref={playerRef}
-            width="0"
-            height="0"
-            src="https://www.youtube.com/embed/15tVFFGsI1E"
-            title="YouTube video player"
-            allow="autoplay; encrypted-media"
-          ></iframe> */}
         </button>
+        <ReactPlayer className="react-player"
+          // url="https://www.youtube.com/watch?v=15tVFFGsI1E"
+          url="https://www.youtube.com/watch?v=7vcTRWE2_u8"
+          playing={isPlaying}
+          width="0"
+          height="0"
+        />
       </div>
     </div>
   );
 }
 
 export default MusicPlayer;
+
+
+
+
+
+
+
+
+
+
+
+// import { useRef, useState } from "react";
+// import "./MPlayer.css";
+
+// function MusicPlayer() {
+//   const playerRef = useRef(null);
+//   const [isPlaying, setIsPlaying] = useState(false);
+
+//   function togglePlay() {
+//     if (isPlaying) {
+//       // Stop the YouTube playlist
+//       playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E";
+//     } else {
+//       // Play the YouTube playlist
+//       playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E?autoplay=1";
+//     }
+//     setIsPlaying(!isPlaying);
+//   }
+
+//   return (
+//     <div className="music-player-container">
+//       <div className="player-content">
+//         <h3>HOW ARE YOU TODAY?</h3>
+//         <p>Take a moment to reflect on your thoughts and emotions.</p>
+//         <p>
+//           Whether joy, stress, or something in between, acknowledging your
+//           feelings is the first step towards understanding yourself better.
+//         </p>
+//         <p>Immerse yourself in meditation music and explore your thoughts.</p>
+//         <button className="play-button" onClick={togglePlay}>
+//           {isPlaying ? "Stop" : "Play"}
+//           {/* <iframe
+//             ref={playerRef}
+//             width="0"
+//             height="0"
+//             src="https://www.youtube.com/embed/15tVFFGsI1E"
+//             title="YouTube video player"
+//             allow="autoplay; encrypted-media"
+//           ></iframe> */}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default MusicPlayer;
 

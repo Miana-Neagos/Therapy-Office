@@ -21,7 +21,8 @@ function NavBar() {
 
  function toggleSignInUp(){
     if (auth) {
-      setAuth(null);
+      setAuth('');
+      localStorage.removeItem("userId")
       localStorage.removeItem("accessToken")
     }
     closeMobileMenu();

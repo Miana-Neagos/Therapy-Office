@@ -1,6 +1,6 @@
 {
-    "users*": "/600/users$1",
-    "alinaS*": "/600/alinaS$1",
-    "andraC": "/600/andraC$1",
-    "appointments": "/640/appointments$1"
+    "/users*": "/600/users$1",
+    "/alinaS*": "/444/alinaS$1",
+    "/andraC*": "/444/andraC$1",
+    "/appointments*": "/600/appointments$1"
 }

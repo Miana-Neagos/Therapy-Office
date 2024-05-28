@@ -32,12 +32,38 @@ export async function fetchAvailableDates(setAvailableDates) {
 // }
 
 
+// export async function fetchAppointments(setAppointments, accessToken, userId) {
+//   console.log('this is FETCH APPOINTMENTS');
+//   console.log({accessToken});
+//   console.log({userId});
+//   try {
+//     const response = await fetch(`http://localhost:3000/600/appointments?userId=${userId}`, {
+//       headers: {
+//         'Authorization': `Bearer ${accessToken}`
+//       }
+//     });
+//     const data = await response.json();
+//     if (response.ok) {
+//       console.log(data);
+//       setAppointments(data);
+//     } 
+//     else {
+//       console.error("Failed to fetch appointments:", data.message);
+//     }
+//   } catch (error) {
+//     console.error("Fetch error:", error);
+//   }
+// }
+ 
+
 export async function fetchAppointments(setAppointments, accessToken, userId) {
   console.log('this is FETCH APPOINTMENTS');
   console.log({accessToken});
   console.log({userId});
   try {
     const response = await fetch(`http://localhost:3000/appointments?userId=${userId}`, {
+    // const response = await fetch(`http://localhost:3000/appointments?token=${accessToken}&userId=${userId}`, {
+    // const response = await fetch(`http://localhost:3000/appointments`, {
       headers: {
         'Authorization': `Bearer ${accessToken}`
       }
