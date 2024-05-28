@@ -1,6 +1,12 @@
+.booking-form-time {
+  display: flex;
+  flex-direction: column;
+}
+
 .booking-container {
   display: flex;
-  max-width: fit-content;
+  /* max-width: fit-content; */
+  width: 65%;
   flex-direction: column;
   margin-top: 2rem;
   border-radius: 20px;
@@ -13,13 +19,13 @@
   text-align: center;
 }
 
-.booking-container h2,
-.booking-container h3 {
+.booking-container h1,
+.booking-container h2 {
   margin: 1rem 0;
   color: #333;
 }
 
-.booking-container h3 {
+.booking-container h2 {
   color: #7f7979;
 }
 

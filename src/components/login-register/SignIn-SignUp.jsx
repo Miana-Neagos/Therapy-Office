@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef } from 'react';
 import './SignIn-SignUp.css';
 import { signIn, signUp } from '../lib/register-authenticate';
 import { useNavigate } from 'react-router-dom';
@@ -8,17 +8,21 @@ function LoginRegister() {
   const [signUpMode, setSignUp] = useState(false);
   const {setAuth} = useContext(AuthContext)
   const navigate = useNavigate();
-  // const [selectedTherapist, setSelectedTherapist] = useState('');
 
-  const handleButtonClick = () => {
-    setSignUp((prevState) => !prevState);
+  // catch a reference to the form element using "useRef" hook
+  // Create a reference to the form
+  const formRef = useRef();
+
+  const toggleSignInUp = () => {
+    setSignUp(true);
+    formRef.current.reset();
   };
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
 
     // catching the user input values + destructuring user input after "if"
-    const formElement = e.target;
+    const formElement = formRef.current;
     const { name, email, password, retypePassword } = formElement;
 
     if (signUpMode && password.value !== retypePassword.value) {
@@ -39,12 +43,12 @@ function LoginRegister() {
       // SIGN IN function found in register-authenticate component -sending setAuth so token is caught and saved @App level (eventually)
       signIn(user,navigate,setAuth);
     }
-  };
+  }
 
   return (
     <div className="container">
       <div className={`form-container ${signUpMode ? 'sign-up-mode' : ''}`}>
-        <form className="form" onSubmit={handleSubmit}>
+        <form ref={formRef} className="form" onSubmit={handleSubmit}>
           {signUpMode ? (
             <>
               <h2>Create your Account</h2>
@@ -73,7 +77,7 @@ function LoginRegister() {
 
         <div className="img">
           <h3>{signUpMode ? 'Already have an account?' : "Don't have an account?"}</h3>
-          <button className="toggle-btn" onClick={handleButtonClick}>
+          <button className="toggle-btn" onClick={toggleSignInUp}>
             {signUpMode ? 'Sign In' : 'Sign Up'}
           </button>
         </div>

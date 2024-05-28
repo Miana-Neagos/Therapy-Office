@@ -13,11 +13,14 @@ export async function signIn(user, navigate, setAuth) {
       body: JSON.stringify(user),
     });
     const data = await response.json();
+    console.log({data});
+    console.log(data.user.id);
 
     if (response.ok) {
       console.log("Sign In successful:", data);
       localStorage.setItem("accessToken", data.accessToken);
-      setAuth(data.accessToken);
+      localStorage.setItem("userId", data.user.id)
+      setAuth({ accessToken: data.accessToken, userId: data.user.id });
       navigate("/");
     }
   } catch (error) {
@@ -37,7 +40,7 @@ export async function signUp(user, navigate) {
     });
     const data = await response.json();
     console.log("Sign Up successful:", data);
-    navigate("/login");
+    navigate("/login-register");
   } catch (error) {
     console.error("Error during sign-up:", error);
   }

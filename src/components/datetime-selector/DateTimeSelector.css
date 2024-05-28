@@ -3,42 +3,22 @@
   border-radius: 8px;
   box-shadow: 0px 8px 20px 0px rgb(168 218 220);
 }
-
-.react-calendar__navigation button {
-  color: #333;
-  min-width: 44px;
-  background: none;
-  font-size: 16px;
-  margin-top: 8px;
+.select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
-.react-calendar__tile {
-  color: #333;
-}
-
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:enabled:focus {
-  background: #f8f8fa;
-  color: #d4a713;
-  border-radius: 6px;
-}
-
-.react-calendar__tile--now {
-  background: #d4a71333;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #d4a713;
-}
-
-.react-calendar__tile--active {
-  background: #9e9e9e;
-  border-radius: 6px;
-  font-weight: bold;
-  color: grey;
-}
-
-/* Styling for time slot buttons */
 .calendar-and-slots-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 2rem; */
+  margin: 1rem;
+}
+.time-slot-container,
+.time-slot-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,61 +26,41 @@
   margin: 1rem;
 }
 
-.select {
-  width: 100%;
-  padding: 1rem;
-  /* margin-bottom: 1rem; */
-  /* border: 1px solid #ccc; */
-  border-radius: 5px;
-}
-
-.time-slot-container {
-  display: flex;
-  flex-direction: column;
+.time-slot-container,
+.time-slot-buttons {
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .time-slot-buttons {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   gap: 1.2rem;
-  margin-bottom: 1rem;
 }
 
 .time-slot-buttons button {
-  color: #fff;
-  background: linear-gradient(180deg, #dac8a5, #7a5836);
+  background: linear-gradient(181deg, #dac8a5, #97b4ba);
   border: none;
   border-radius: 0.5rem;
-  height: 2.5rem;
+  height: 3rem;
   min-width: 5rem; 
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 2.5rem; 
   text-align: center;
 }
 
-.time-slot-buttons button:disabled {
+.time-slot-buttons button:disabled,
+.time-slot-buttons button:disabled:hover {
   background: #e7e7e7;
   color: #aaa;
   cursor: not-allowed;
 }
 
-.time-slot-buttons button:disabled:hover {
-  background: #e7e7e7;
-  color: #aaa;
-}
-
 .time-slot-buttons button:hover {
   background: linear-gradient(0deg, #3c6a62, #c7b28f8c);
-  transform: scale(1.05); 
+  transform: scale(1.04); 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .time-slot-buttons button:active {
@@ -108,15 +68,36 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .instruction {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.5rem;
-  margin: 0 auto;
+  margin: 1rem auto;
+  flex-direction: column;
 }
 
 .instruction p {
-  /* margin: 0; */
-  width: 30%;
+  /* font-weight: bold; */
+  font-size: 1.1rem;
+  margin: 0;
+  /* padding: 0.5rem; */
+}
+
+.booking-icon {
+  margin: 0.5rem;
+  transform: rotate(180deg);
+  animation: pulse 1.5s infinite;
 }

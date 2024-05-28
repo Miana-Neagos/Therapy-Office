@@ -14,12 +14,12 @@ function NavBar() {
   const { auth, setAuth } = useContext(AuthContext);
 
   // toggles the click state between true and false
-  const handleClick = () => setClick(!click);
+  const toggleClick = () => setClick(!click);
 
   // sets the click state to false, closing the mobile menu
   const closeMobileMenu = () => setClick(false);
 
- function handleAuth(){
+ function toggleSignInUp(){
     if (auth) {
       setAuth(null);
       localStorage.removeItem("accessToken")
@@ -27,7 +27,7 @@ function NavBar() {
     closeMobileMenu();
   }
 
-  const links = navLinks(auth, handleAuth, closeMobileMenu);
+  const links = navLinks(auth, toggleSignInUp, closeMobileMenu);
 
   return (
     <>
@@ -38,7 +38,7 @@ function NavBar() {
               <GiPuzzle className="navbar-icon" />
               <p>Fetele cu Psiho</p>
             </Link>
-            <div className="short-menu" onClick={handleClick}>
+            <div className="short-menu" onClick={toggleClick}>
               {click ? <IoCloseCircle className="short-menu-icon"/> : <RxDropdownMenu className="short-menu-icon"/>}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
