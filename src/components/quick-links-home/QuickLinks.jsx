@@ -3,29 +3,31 @@ import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaQuestionCircle, FaInfoCircle, FaBook, FaYoutube } from "react-icons/fa";
 import "./QuickLinks.css"; // Import QuickLinks CSS
-import { fetchPlaylist } from "../lib/playlists";
+// import { fetchPlaylist } from "../lib/playlists";
 import { useEffect, useState } from "react";
 
 function QuickLinks() {
   // console.log('this is QUICK LINKS');
-  const [playlist , setPlaylist] = useState('');
-  // console.log({playlist});
+  // const [playlist , setPlaylist] = useState('');
+  // // console.log({playlist});
 
-  useEffect(() => {
-    fetchPlaylist(setPlaylist);
-  }, []);
+  // useEffect(() => {
+  //   fetchPlaylist(setPlaylist);
+  // }, []);
 
   return (
     <div className="quick-links">
       <IconContext.Provider value={{ size: "3em" }}>
-        {playlist && (
+        {/* {playlist && ( */}
           <div>
             <FaYoutube />
-            <a href={playlist} target="_blank" rel="noopener noreferrer">
+            <a 
+              // href={playlist} 
+              target="_blank" rel="noopener noreferrer">
               <button>How Therapy Works</button>
             </a>
           </div>
-        )}
+        {/* )} */}
         <div>
           <FaBook />
           <Link to="/services">
