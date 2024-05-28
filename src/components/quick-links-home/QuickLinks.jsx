@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaQuestionCircle, FaInfoCircle, FaBook, FaYoutube } from "react-icons/fa";
 import "./QuickLinks.css"; // Import QuickLinks CSS
-// import { fetchPlaylist } from "../lib/playlists";
 import { useEffect, useState } from "react";
 
 function QuickLinks() {
   // console.log('this is QUICK LINKS');
   // const [playlist , setPlaylist] = useState('');
   // // console.log({playlist});
+  const playlistUrl = 'https://www.youtube.com/watch?v=R4B9BPBiIHo&list=PLT2eOpjZ2tjeUbeo7uM27a1Ysbk4FAs9J'
 
   // useEffect(() => {
   //   fetchPlaylist(setPlaylist);
@@ -18,16 +18,12 @@ function QuickLinks() {
   return (
     <div className="quick-links">
       <IconContext.Provider value={{ size: "3em" }}>
-        {/* {playlist && ( */}
           <div>
             <FaYoutube />
-            <a 
-              // href={playlist} 
-              target="_blank" rel="noopener noreferrer">
+            <a href={playlistUrl}>
               <button>How Therapy Works</button>
             </a>
           </div>
-        {/* )} */}
         <div>
           <FaBook />
           <Link to="/services">
