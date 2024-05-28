@@ -2,25 +2,17 @@
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaQuestionCircle, FaInfoCircle, FaBook, FaYoutube } from "react-icons/fa";
-import "./QuickLinks.css"; // Import QuickLinks CSS
-import { useEffect, useState } from "react";
+import "./QuickLinks.css"; /
 
 function QuickLinks() {
-  // console.log('this is QUICK LINKS');
-  // const [playlist , setPlaylist] = useState('');
-  // // console.log({playlist});
   const playlistUrl = 'https://www.youtube.com/watch?v=R4B9BPBiIHo&list=PLT2eOpjZ2tjeUbeo7uM27a1Ysbk4FAs9J'
-
-  // useEffect(() => {
-  //   fetchPlaylist(setPlaylist);
-  // }, []);
 
   return (
     <div className="quick-links">
       <IconContext.Provider value={{ size: "3em" }}>
           <div>
             <FaYoutube />
-            <a href={playlistUrl}>
+            <a href={playlistUrl} target="_blank">
               <button>How Therapy Works</button>
             </a>
           </div>
