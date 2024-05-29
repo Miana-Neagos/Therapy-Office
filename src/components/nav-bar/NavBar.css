@@ -1,6 +1,6 @@
 /* Navbar CSS */
 .navbar {
-  background: #333;
+  background: #22312d;
   height: 80px;
   max-width: 100vw;
   display: flex;
@@ -121,12 +121,12 @@
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
-    background: #333;
+    background: #22312d;
     margin: 0;
   }
 
   .nav-menu.active {
-    background: #333;
+    background: #22312d;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;

@@ -164,4 +164,15 @@
     margin-top: 4rem;
 }
 
+.success-message {
+    color: #c24933;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem auto;
+    text-shadow: -2px 0px 0px rgb(255 255 255);
+    /* box-shadow: inset -5px -5px 10px rgba(255,255,255,0.7); */
+}
 

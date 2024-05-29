@@ -1,10 +1,9 @@
-function validateForm(formData) {
+export function validateContactForm(formData) {
   const { name, email, subject, message } = formData;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const errors = {};
 
-  // Check if any field is empty
   if (!name) {
     errors.name = "Please enter your name";
   }
@@ -30,4 +29,28 @@ function validateForm(formData) {
   return errors;
 }
 
-export default validateForm;
+
+
+
+export function validateSignUp(formData) {
+  const { name, email, password } = formData;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const errors = {};
+
+  if (!name) {
+    errors.name = "Please enter your name";
+  }
+
+  if (!email) {
+    errors.email = "Please enter your email address";
+  } else if (!emailRegex.test(email)) {
+    errors.email = "Please enter a valid email address";
+  }
+
+  if (!password) {
+    errors.pass = "Please enter a password";
+  } 
+
+  return errors;
+}

@@ -22,9 +22,9 @@ function App() {
   const userId = Number(localStorage.getItem("userId"));
   const [auth, setAuth] = useState({ accessToken, userId });
   const [availableDates, setAvailableDates] = useState();
-  const [appointments, setAppointments] = useState();
-  // console.log(accessToken);
-  console.log({auth});
+  const [appointments, setAppointments] = useState([]);
+  console.log(accessToken);
+  // console.log({auth});
   // console.log(auth.accessToken);
   // console.log(Boolean(auth));
 

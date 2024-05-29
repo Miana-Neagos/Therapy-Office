@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import UserUpdates from "../b-user-appointments/UserAppointments"
 import DateTimeSelector from "../datetime-selector/DateTimeSelector";
 import { AuthContext, BookingContext } from "../../App";
+import { updateDB } from "./updateDB";
+import formatDate from "../lib/formatDate";
 import "./Booking.css";
 
 function ManageBooking() {
@@ -10,15 +12,15 @@ function ManageBooking() {
   const { auth } = useContext(AuthContext);
   const { therapist } = useParams();
   const navigate = useNavigate();
-  const { availableDates, setAvailableDates } = useContext(BookingContext);
+  const { availableDates, setAvailableDates, setAppointments } = useContext(BookingContext);
   const [selectedDate, setSelectedDate] = useState();
   const [selectedTime, setSelectedTime] = useState();
   const [docSlots, setDocSlots] = useState([]);
-  console.log({auth});
+  // console.log({auth});
   // console.log(typeof(auth.userId));
-  console.log({availableDates});
+  // console.log({availableDates});
   useEffect(() => {
-    if (therapist && availableDates[therapist]) {
+    if (therapist && availableDates) {
       setDocSlots(availableDates[therapist]);
     }
   }, [therapist, availableDates]);
@@ -34,40 +36,42 @@ async function addBooking(booking) {
   try {
     const response = await fetch(`http://localhost:3000/appointments`, {
       method: 'POST',
-      headers: {'Content-Type':'application/json',},
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${auth.accessToken}`
+      },
       body: JSON.stringify(booking),
     });
+    const addApptResponse = await response.json();
+    console.log({ addApptResponse });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const newBooking = await response.json();
-    updateAvailableDates(newBooking, 'add');
+    // calls setAppointments to update the appointments state in BookingContext
+    setAppointments(prevAppointments => [...prevAppointments, addApptResponse]);
+    
+    // calls updateAvailableDates to update the state for overall availabilities db
+    updateAvailableDates(addApptResponse, 'add');
   } catch (error) {
     console.error('Error adding appointment:', error);
   }
+
 }
-  
-  // function updateAvailableDates(appointment, action) {
-  //   const selectedDay = docSlots.find(elem => elem.date === appointment.date);
-  //   const selectedSlot = selectedDay.slots.find(slot => slot.time === appointment.time);
-
-  //   if (action === 'add') {
-  //     console.log('ADDED TO DB');
-  //     selectedSlot.available = false;
-  //   } else if (action === 'delete') {
-  //     console.log('REMOVED FROM DB');
-  //     selectedSlot.available = true;
-  //   }
-  // }
-
+  // function updates the state for overall availabilities db --> receives appointment and action data from both "addBooking" and "deleteBooking"(from UserAppointments)
   function updateAvailableDates(appointment, action) {
+    console.log('This is UPDATE AVAILABLE DATES');
+    console.log({appointment});
     setAvailableDates(prevDates => {
+      console.log('this is SET AVAILABLE DATES');
+      console.log({prevDates});
       const updatedDates = { ...prevDates };
       const therapistDates = updatedDates[appointment.therapist];
       const selectedDay = therapistDates.find(elem => elem.date === appointment.date);
+      console.log({selectedDay});
       const selectedSlot = selectedDay.slots.find(slot => slot.time === appointment.time);
+      console.log({selectedSlot});
 
       if (action === 'add') {
         console.log('ADDED TO DB');
@@ -77,8 +81,15 @@ async function addBooking(booking) {
         selectedSlot.available = true;
       }
 
+      console.log({updatedDates});
+
+      //calls the utility function that manages the entire availabilities DB
+      updateDB(appointment, updatedDates, auth.accessToken)
+      
       return updatedDates;
     });
+
+    // updates the available dates in the database
   }
 
   function bookingSubmit(event) {
@@ -113,17 +124,18 @@ async function addBooking(booking) {
       <h2>Browse through the calendar for the suitable date & time for your next appointment</h2>
       {/* <p>Selected therapist :  {therapist ? (therapist === 'alinaS' ? 'Alina Salomie' : 'Andra Costin') : 'No therapist selected.'}</p> */}
       {auth.accessToken && auth.userId ? 
-        <UserUpdates onChange={updateAvailableDates}/>
+        <UserUpdates onChange={updateAvailableDates} auth={auth} setAppointments={setAppointments}/>
       : ''}  
       <form className="booking-form-time" onSubmit={bookingSubmit}>
         <DateTimeSelector
           availableSlots={docSlots}
           onSelect={dateTimeSelection}
+          auth={auth}
         />
         <div>
         {selectedDate && (
             <p className="selection">
-              Selected date {selectedDate} & time {selectedTime}
+              Selected date: {formatDate(selectedDate)} --- Selected time: {selectedTime}
             </p>
           )}
           <button 

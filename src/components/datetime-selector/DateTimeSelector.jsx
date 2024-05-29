@@ -8,8 +8,9 @@ import PropTypes from "prop-types";
 // receiving "availableSlots/therapist to further use in the UI for creating time slot buttons"
 // "onSelect" allows the DateTimeSelector to communicate the selected date and time back to its parent component(ManageBooking)
 
-function DateTimeSelector({ availableSlots, onSelect }) {
-  // console.log('This is DATE TIME SELECTOR');
+function DateTimeSelector({ availableSlots, onSelect, auth }) {
+  console.log('This is DATE TIME SELECTOR');
+  console.log(auth);
   // console.log({availableSlots});
   // console.log({onSelect});
   const [selectedDate, setSelectedDate] = useState(undefined);
@@ -39,6 +40,11 @@ function DateTimeSelector({ availableSlots, onSelect }) {
     onSelect(selectedDateString, selectedTime);
   }, [selectedDateString, selectedTime, onSelect]);
 
+  function manageTimeClick(event, time){
+    event.preventDefault();
+    setSelectedTime(time);
+  }
+
   // console.log({
   //   availableSlots,
   //   selectedDate,
@@ -53,8 +59,10 @@ function DateTimeSelector({ availableSlots, onSelect }) {
       {!selectedDateString && (
           <div className="instruction">
             {/* <div> */}
-              <p>Please pick a date to view all available time slots for that day.</p>
-              <p>Note: You will need an account to book an appointment.</p>
+              <p>Pick a date to view all available time slots for that day.</p>
+              {!auth.accessToken ? 
+              <p>Note: You will need an account to book an appointment.</p> : ''
+              }
             {/* </div> */}
             <div>
               <FaArrowAltCircleDown className="booking-icon" size={50} color="#8bc2c4" />
@@ -73,7 +81,7 @@ function DateTimeSelector({ availableSlots, onSelect }) {
               <button
                 key={index}
                 disabled={!slot.available}
-                onClick={() => setSelectedTime(slot.time)}
+                onClick={() => manageTimeClick(event, slot.time)}
               >
                 {slot.time}
               </button>
@@ -88,6 +96,7 @@ function DateTimeSelector({ availableSlots, onSelect }) {
 DateTimeSelector.propTypes = {
   availableSlots: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
 };
 
 export default DateTimeSelector;

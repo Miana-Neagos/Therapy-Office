@@ -1,10 +1,11 @@
 /* Styling for React Calendar */
 .react-calendar {
   border-radius: 8px;
-  box-shadow: 0px 8px 20px 0px rgb(168 218 220);
+  box-shadow: 0px -8px 20px 0px rgb(187 220 255);
 }
 .select {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   padding: 1rem;
   border-radius: 5px;
 }
@@ -15,7 +16,7 @@
   justify-content: center;
   align-items: center;
   /* gap: 2rem; */
-  margin: 1rem;
+  margin: 1.3rem 1rem 0 1rem;
 }
 .time-slot-container,
 .time-slot-buttons {
@@ -33,21 +34,29 @@
 }
 
 .time-slot-buttons {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.2rem;
+  justify-content: center; /* Center the buttons */
+  margin-top: 1rem;
 }
 
 .time-slot-buttons button {
-  background: linear-gradient(181deg, #dac8a5, #97b4ba);
+  background: linear-gradient(181deg, #f0f0f0, #d1d1d1);
   border: none;
+  padding: 0 0.4rem;
   border-radius: 0.5rem;
-  height: 3rem;
-  min-width: 5rem; 
+  height: 2rem;
+  min-width: 5rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 1rem;
-  font-weight: bold;
-  line-height: 2.5rem; 
+  font-weight: 600;
+  /* line-height: 2.5rem; */
   text-align: center;
+  color: #603f22e3;
+  /* color: #2f7330; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .time-slot-buttons button:disabled,
@@ -55,29 +64,22 @@
   background: #e7e7e7;
   color: #aaa;
   cursor: not-allowed;
+  border: 1px solid #ddd;
 }
 
-.time-slot-buttons button:hover {
-  background: linear-gradient(0deg, #3c6a62, #c7b28f8c);
-  transform: scale(1.04); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.time-slot-buttons button:hover:not(:disabled) {
+  background: linear-gradient(0deg, #e0e0e0, #bdbdbd);
+  transform: scale(1.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.time-slot-buttons button:active {
-  transform: scale(0.95);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.time-slot-buttons button:focus:not(:disabled) {
+  box-shadow: 0 0 0 2px #94b1af;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.time-slot-buttons button:active:not(:disabled) {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .instruction {
@@ -93,6 +95,8 @@
   /* font-weight: bold; */
   font-size: 1.1rem;
   margin: 0;
+  color: #7f7979;
+  font-weight: bold;
   /* padding: 0.5rem; */
 }
 
@@ -100,4 +104,16 @@
   margin: 0.5rem;
   transform: rotate(180deg);
   animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
