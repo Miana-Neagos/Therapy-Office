@@ -6,6 +6,7 @@ import { AuthContext, BookingContext } from "../../App";
 import { updateDB } from "./updateDB";
 import formatDate from "../lib/formatDate";
 import "./Booking.css";
+import ModalAction from "../modal/Modal";
 
 function ManageBooking() {
   console.log('this is MANAGE BOOKING');
@@ -16,9 +17,10 @@ function ManageBooking() {
   const [selectedDate, setSelectedDate] = useState();
   const [selectedTime, setSelectedTime] = useState();
   const [docSlots, setDocSlots] = useState([]);
-  // console.log({auth});
-  // console.log(typeof(auth.userId));
-  // console.log({availableDates});
+  const [viewModal, setViewModal] = useState(false);
+  const [error, setError] = useState(false);
+  const [modalMsg, setModalMsg] = useState('');
+
   useEffect(() => {
     if (therapist && availableDates) {
       setDocSlots(availableDates[therapist]);
@@ -30,83 +32,16 @@ function ManageBooking() {
     setSelectedTime(time);
   }
 
-async function addBooking(booking) {
-  console.log('this is ADD BOOKING');
-  console.log({booking});
-  try {
-    const response = await fetch(`http://localhost:3000/appointments`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${auth.accessToken}`
-      },
-      body: JSON.stringify(booking),
-    });
-    const addApptResponse = await response.json();
-    console.log({ addApptResponse });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    // calls setAppointments to update the appointments state in BookingContext
-    setAppointments(prevAppointments => [...prevAppointments, addApptResponse]);
-    
-    // calls updateAvailableDates to update the state for overall availabilities db
-    updateAvailableDates(addApptResponse, 'add');
-  } catch (error) {
-    console.error('Error adding appointment:', error);
-  }
-
-}
-  // function updates the state for overall availabilities db --> receives appointment and action data from both "addBooking" and "deleteBooking"(from UserAppointments)
-  function updateAvailableDates(appointment, action) {
-    console.log('This is UPDATE AVAILABLE DATES');
-    console.log({appointment});
-    setAvailableDates(prevDates => {
-      console.log('this is SET AVAILABLE DATES');
-      console.log({prevDates});
-      const updatedDates = { ...prevDates };
-      const therapistDates = updatedDates[appointment.therapist];
-      const selectedDay = therapistDates.find(elem => elem.date === appointment.date);
-      console.log({selectedDay});
-      const selectedSlot = selectedDay.slots.find(slot => slot.time === appointment.time);
-      console.log({selectedSlot});
-
-      if (action === 'add') {
-        console.log('ADDED TO DB');
-        selectedSlot.available = false;
-      } else if (action === 'delete') {
-        console.log('REMOVED FROM DB');
-        selectedSlot.available = true;
-      }
-
-      console.log({updatedDates});
-
-      //calls the utility function that manages the entire availabilities DB
-      updateDB(appointment, updatedDates, auth.accessToken)
-      
-      return updatedDates;
-    });
-
-    // updates the available dates in the database
-  }
-
-  function bookingSubmit(event) {
-    // console.log('This is the SUBMIT from Booking');
+  // Refactored function that combines bookingSubmit and addBooking
+  async function bookingSubmit(event) {
     event.preventDefault();
     if (!selectedDate || !selectedTime) {
-      // console.error("Must have user account or be logged in to book appointment.");
-      // console.error("Both selected date and time must be provided.");
       return;
     }  
     if (!auth.accessToken) {
       navigate("/login-register");
       return;
     }
-    console.log("this is the USER ID from ManageBooking");
-    console.log(auth.userId);
-    console.log(auth.accessToken);
     const newBooking = {
       userId: Number(auth.userId),
       therapist,
@@ -115,14 +50,63 @@ async function addBooking(booking) {
       dayId: selectedDate.id
     }
 
-    addBooking(newBooking, updateAvailableDates);
+    try {
+      const response = await fetch(`http://localhost:3000/appointments`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${auth.accessToken}`
+        },
+        body: JSON.stringify(newBooking),
+      });
+      const addApptResponse = await response.json();
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      // Update the appointments state in BookingContext
+      setAppointments(prevAppointments => [...prevAppointments, addApptResponse]);
+      
+      // Update the state for overall availabilities db
+      updateAvailableDates(addApptResponse, 'add');
+      setModalMsg('Appointment added successfully.')
+      setError(false);
+      setViewModal(true);
+
+    } catch (error) {
+      console.error('Error adding appointment:', error);
+      setModalMsg('Booking failed. Please refresh and try again.')
+      setError(true);
+      setViewModal(true);
+    }
+  }
+
+  // Function updates the state for overall availabilities db
+  function updateAvailableDates(appointment, action) {
+    setAvailableDates(prevDates => {
+      const updatedDates = { ...prevDates };
+      const therapistDates = updatedDates[appointment.therapist];
+      const selectedDay = therapistDates.find(elem => elem.date === appointment.date);
+      const selectedSlot = selectedDay.slots.find(slot => slot.time === appointment.time);
+
+      if (action === 'add') {
+        selectedSlot.available = false;
+      } else if (action === 'delete') {
+        selectedSlot.available = true;
+      }
+
+      // Calls the utility function that manages the entire availabilities DB
+      updateDB(appointment, updatedDates, auth.accessToken)
+      
+      return updatedDates;
+    });
   }
 
   return (
     <div className="booking-container">
       <h1>Book & Manage Appointments</h1>
       <h2>Browse through the calendar for the suitable date & time for your next appointment</h2>
-      {/* <p>Selected therapist :  {therapist ? (therapist === 'alinaS' ? 'Alina Salomie' : 'Andra Costin') : 'No therapist selected.'}</p> */}
       {auth.accessToken && auth.userId ? 
         <UserUpdates onChange={updateAvailableDates} auth={auth} setAppointments={setAppointments}/>
       : ''}  
@@ -146,11 +130,173 @@ async function addBooking(booking) {
           </button>
         </div>
       </form>
+      {viewModal && <ModalAction 
+        onCancel={() => setViewModal(false)}
+        message={modalMsg}
+        error={error}
+      />}
     </div>
   )
 }
 
 export default ManageBooking;
+
+
+
+
+// import { useContext, useState, useEffect } from "react";
+// import { useParams, useNavigate } from "react-router-dom";
+// import UserUpdates from "../b-user-appointments/UserAppointments"
+// import DateTimeSelector from "../datetime-selector/DateTimeSelector";
+// import { AuthContext, BookingContext } from "../../App";
+// import { updateDB } from "./updateDB";
+// import formatDate from "../lib/formatDate";
+// import "./Booking.css";
+
+// function ManageBooking() {
+//   console.log('this is MANAGE BOOKING');
+//   const { auth } = useContext(AuthContext);
+//   const { therapist } = useParams();
+//   const navigate = useNavigate();
+//   const { availableDates, setAvailableDates, setAppointments } = useContext(BookingContext);
+//   const [selectedDate, setSelectedDate] = useState();
+//   const [selectedTime, setSelectedTime] = useState();
+//   const [docSlots, setDocSlots] = useState([]);
+//   // console.log({auth});
+//   // console.log(typeof(auth.userId));
+//   // console.log({availableDates});
+//   useEffect(() => {
+//     if (therapist && availableDates) {
+//       setDocSlots(availableDates[therapist]);
+//     }
+//   }, [therapist, availableDates]);
+
+//   function dateTimeSelection(date, time) {
+//     setSelectedDate(date);
+//     setSelectedTime(time);
+//   }
+
+// async function addBooking(booking) {
+//   console.log('this is ADD BOOKING');
+//   console.log({booking});
+//   try {
+//     const response = await fetch(`http://localhost:3000/appointments`, {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'Authorization': `Bearer ${auth.accessToken}`
+//       },
+//       body: JSON.stringify(booking),
+//     });
+//     const addApptResponse = await response.json();
+//     console.log({ addApptResponse });
+
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
+
+//     // calls setAppointments to update the appointments state in BookingContext
+//     setAppointments(prevAppointments => [...prevAppointments, addApptResponse]);
+    
+//     // calls updateAvailableDates to update the state for overall availabilities db
+//     updateAvailableDates(addApptResponse, 'add');
+//   } catch (error) {
+//     console.error('Error adding appointment:', error);
+//   }
+
+// }
+//   // function updates the state for overall availabilities db --> receives appointment and action data from both "addBooking" and "deleteBooking"(from UserAppointments)
+//   function updateAvailableDates(appointment, action) {
+//     console.log('This is UPDATE AVAILABLE DATES');
+//     console.log({appointment});
+//     setAvailableDates(prevDates => {
+//       console.log('this is SET AVAILABLE DATES');
+//       console.log({prevDates});
+//       const updatedDates = { ...prevDates };
+//       const therapistDates = updatedDates[appointment.therapist];
+//       const selectedDay = therapistDates.find(elem => elem.date === appointment.date);
+//       console.log({selectedDay});
+//       const selectedSlot = selectedDay.slots.find(slot => slot.time === appointment.time);
+//       console.log({selectedSlot});
+
+//       if (action === 'add') {
+//         console.log('ADDED TO DB');
+//         selectedSlot.available = false;
+//       } else if (action === 'delete') {
+//         console.log('REMOVED FROM DB');
+//         selectedSlot.available = true;
+//       }
+
+//       console.log({updatedDates});
+
+//       //calls the utility function that manages the entire availabilities DB
+//       updateDB(appointment, updatedDates, auth.accessToken)
+      
+//       return updatedDates;
+//     });
+
+//     // updates the available dates in the database
+//   }
+
+//   function bookingSubmit(event) {
+//     // console.log('This is the SUBMIT from Booking');
+//     event.preventDefault();
+//     if (!selectedDate || !selectedTime) {
+//       // console.error("Must have user account or be logged in to book appointment.");
+//       // console.error("Both selected date and time must be provided.");
+//       return;
+//     }  
+//     if (!auth.accessToken) {
+//       navigate("/login-register");
+//       return;
+//     }
+//     console.log("this is the USER ID from ManageBooking");
+//     console.log(auth.userId);
+//     console.log(auth.accessToken);
+//     const newBooking = {
+//       userId: Number(auth.userId),
+//       therapist,
+//       date: selectedDate,
+//       time: selectedTime,
+//       dayId: selectedDate.id
+//     }
+
+//     addBooking(newBooking, updateAvailableDates);
+//   }
+
+//   return (
+//     <div className="booking-container">
+//       <h1>Book & Manage Appointments</h1>
+//       <h2>Browse through the calendar for the suitable date & time for your next appointment</h2>
+//       {/* <p>Selected therapist :  {therapist ? (therapist === 'alinaS' ? 'Alina Salomie' : 'Andra Costin') : 'No therapist selected.'}</p> */}
+//       {auth.accessToken && auth.userId ? 
+//         <UserUpdates onChange={updateAvailableDates} auth={auth} setAppointments={setAppointments}/>
+//       : ''}  
+//       <form className="booking-form-time" onSubmit={bookingSubmit}>
+//         <DateTimeSelector
+//           availableSlots={docSlots}
+//           onSelect={dateTimeSelection}
+//           auth={auth}
+//         />
+//         <div>
+//         {selectedDate && (
+//             <p className="selection">
+//               Selected date: {formatDate(selectedDate)} --- Selected time: {selectedTime}
+//             </p>
+//           )}
+//           <button 
+//             type="submit" 
+//             className="submit-btn"
+//           >
+//             {auth.accessToken ? "Book Appointment" : "Sign in to book appointment"}
+//           </button>
+//         </div>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default ManageBooking;
 
 
 

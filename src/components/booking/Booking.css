@@ -44,11 +44,12 @@
 }
 
 .submit-btn {
-  width: 40%;
+  width: 28%;
   padding: 1rem;
   background: linear-gradient(135deg, #a8dadc, #77a1d3);
   color: #fff; 
-  border: 1px solid #77a1d3; 
+  /* border: 1px solid #77a1d3;  */
+  border: none;
   border-radius: 10px;
   cursor: pointer;
   font-size: 1.2rem;

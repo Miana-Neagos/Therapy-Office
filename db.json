@@ -368,7 +368,7 @@
         },
         {
           "time": "11:00 - 12:00",
-          "available": false
+          "available": true
         },
         {
           "time": "12:00 - 13:00",
@@ -390,7 +390,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",
@@ -402,7 +402,7 @@
         },
         {
           "time": "14:30 - 15:30",
-          "available": true
+          "available": false
         },
         {
           "time": "15:30 - 16:30",
@@ -658,11 +658,11 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
@@ -718,7 +718,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -770,7 +770,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -892,7 +892,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": true
+          "available": false
         },
         {
           "time": "14:30 - 15:30",
@@ -1004,7 +1004,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": true
+          "available": false
         }
       ]
     },
@@ -1100,7 +1100,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
@@ -1134,7 +1134,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -1548,7 +1548,7 @@
         },
         {
           "time": "14.30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
@@ -1812,7 +1812,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -2342,71 +2342,22 @@
       "userId": 1,
       "therapist": "alinaS",
       "date": "31/05/2024",
-      "time": "10:00 - 11:00",
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "therapist": "alinaS",
-      "date": "14/06/2024",
       "time": "14:30 - 15:30",
-      "id": 4
+      "id": 13
     },
     {
-      "userId": 2,
+      "userId": 1,
       "therapist": "alinaS",
-      "date": "18/06/2024",
-      "time": "15:30 - 16:30",
-      "id": 5
-    },
-    {
-      "userId": 2,
-      "therapist": "alinaS",
-      "date": "20/06/2024",
-      "time": "15:30 - 16:30",
-      "id": 6
-    },
-    {
-      "userId": 2,
-      "therapist": "alinaS",
-      "date": "10/07/2024",
-      "time": "15:30 - 16:30",
-      "id": 7
-    },
-    {
-      "userId": 2,
-      "therapist": "alinaS",
-      "date": "09/07/2024",
+      "date": "27/06/2024",
       "time": "12:00 - 13:00",
-      "id": 8
+      "id": 14
     },
     {
       "userId": 1,
       "therapist": "alinaS",
-      "date": "30/05/2024",
-      "time": "11:00 - 12:00",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "therapist": "alinaS",
-      "date": "14/06/2024",
-      "time": "12:00 - 13:00",
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "therapist": "andraC",
-      "date": "31/05/2024",
-      "time": "14.30 - 15:30",
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "therapist": "andraC",
-      "date": "14/06/2024",
+      "date": "03/07/2024",
       "time": "15:30 - 16:30",
-      "id": 12
+      "id": 15
     }
   ]
 }

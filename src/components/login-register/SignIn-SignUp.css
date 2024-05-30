@@ -176,3 +176,9 @@
     /* box-shadow: inset -5px -5px 10px rgba(255,255,255,0.7); */
 }
 
+/* error-message class styling is defined @ContactForm component level, just adding the "span" element to defined max-width */
+.error-message span{
+    color: red;
+    font-size: 0.8rem;
+    max-width: 12rem;
+  }
