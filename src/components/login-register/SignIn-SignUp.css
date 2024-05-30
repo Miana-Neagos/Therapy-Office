@@ -113,9 +113,9 @@
     border: 1px solid #009684; 
 }
 
-.form label {
+.login-register-label {
     /* width: 100%; */
-    margin: 1rem auto;
+    margin: 0.2rem auto;
 }
 
 .form input {
@@ -177,8 +177,8 @@
 }
 
 /* error-message class styling is defined @ContactForm component level, just adding the "span" element to defined max-width */
-.error-message span{
+/* .error-message span{
     color: red;
     font-size: 0.8rem;
     max-width: 12rem;
-  }
+  } */

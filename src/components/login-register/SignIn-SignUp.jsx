@@ -3,7 +3,7 @@ import './SignIn-SignUp.css';
 import { signIn, signUp } from '../lib/register-authenticate';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../App';
-import {validateSignUp} from '../lib/data-validation'
+import {validateForm} from '../lib/data-validation'
 
 function LoginRegister() {
   const [signUpMode, setSignUp] = useState(false);
@@ -52,7 +52,8 @@ function LoginRegister() {
         return;
       }
 
-      const errors = validateSignUp(user)
+      const errors = validateForm(user);
+      
       if (Object.keys(errors).length > 0) {
         setValidationErr(errors);
         return;
@@ -79,21 +80,21 @@ function LoginRegister() {
             <>
               <h2>Create your Account</h2>
               {serverErr && <span className="error-message">{serverErr}</span>}
+              <label className="login-register-label "htmlFor="name">Name:</label>
               {validationErr.name && <p className="error-message">{validationErr.name}</p>}
-              <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" />
+              <input type="text" id="name" name="name"/>
 
+              <label className="login-register-label "htmlFor="email">Email:</label>
               {validationErr.email && <p className="error-message">{validationErr.email}</p>}
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" />
+              <input type="text" id="email" name="email" />
 
+              <label className="login-register-label "htmlFor="password">Password:</label>
               {validationErr.password && <p className="error-message">{validationErr.password}</p>}
-              <label htmlFor="password">Password:</label>
-              <input type="password" id="password" name="password" />
+              <input type="password" id="password" name="password"/>
 
+              <label className="login-register-label "htmlFor="retypePassword">Retype Password:</label>
               {passErr ? <p className='error-message'>{passErr}</p> : ""}
-              <label htmlFor="retypePassword">Retype Password:</label>
-              <input type="password" id="retypePassword" name="retypePassword" />
+              <input type="password" id="retypePassword" name="retypePassword"/>
 
               <button type="submit" className="submit">Sign Up</button>
             </>
@@ -101,10 +102,12 @@ function LoginRegister() {
             <>
               <h2>Welcome</h2>
               {serverErr && <span className="error-message">{serverErr}</span>}
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" />
-              <label htmlFor="password">Password:</label>
+              <label className="login-register-label "htmlFor="email">Email:</label>
+              <input type="email" id="email" name="email"/>
+
+              <label className="login-register-label "htmlFor="password">Password:</label>
               <input type="password" id="password" name="password" />
+              
               <button type="submit" className="submit">Sign In</button>
               {/* <p className="forgot-pass">Forgot password?</p> */}
             </>

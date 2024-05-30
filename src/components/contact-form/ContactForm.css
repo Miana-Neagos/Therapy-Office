@@ -18,6 +18,13 @@
   flex-direction: column;
   width: 100%; 
 }
+.contact-form label {
+  /* display: block; */
+  margin: 0.1rem 0.3rem;
+  font-weight: bold;
+  color: #331e13;
+  /* text-align: center; */
+}
 
 .contact-form input,
 .contact-form textarea {
@@ -50,6 +57,8 @@ textarea {
 .error-message {
   color: red;
   font-size: 0.8rem;
+  margin: 0.3rem auto;
+  max-width: 12rem;
 }
 
 .submit-status-cover p {

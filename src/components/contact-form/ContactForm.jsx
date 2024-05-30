@@ -1,6 +1,6 @@
 /* SDK VERSION */
 import { useState } from "react";
-import {validateContactForm} from "../lib/data-validation";
+import {validateForm} from "../lib/data-validation";
 import "./ContactForm.css";
 import emailjs from "@emailjs/browser";
 
@@ -20,7 +20,7 @@ function ContactForm() {
       message: message.value,
     };
 
-    const validationErrors = validateContactForm(formData);
+    const validationErrors = validateForm(formData);
     console.log({ validationErrors });
     
     if (Object.keys(validationErrors).length > 0) {
@@ -56,26 +56,26 @@ function ContactForm() {
         <h3>Contact Us</h3>
         {!submitStatus? (
             <form className="contact-form" onSubmit={sendForm}>
-            <label htmlFor="name">Name</label>
-            {errors.name ? <span className="error-message">{errors.name}</span> : ''}
-            <input type="text" id="name" placeholder="Name" name="name" />
+              <label htmlFor="name">Name:</label>
+              {errors.name ? <span className="error-message">{errors.name}</span> : ''}
+              <input type="text" id="name" placeholder="type here" name="name" />
 
-            <label htmlFor="email">Email Address</label>
-            {errors.email ? <span className="error-message">{errors.email}</span> : ''}
-            <input type="email" id="email" placeholder="Email Address" name="email" />
+              <label htmlFor="email">Email Address:</label>
+              {errors.email ? <span className="error-message">{errors.email}</span> : ''}
+              <input type="email" id="email" placeholder="type here" name="email" />
 
-            <label htmlFor="subject">Subject</label>
-            {errors.subject ? <span className="error-message">{errors.subject}</span> : ''}
-            <input type="text" id="subject" placeholder="Subject" name="subject" />
+              <label htmlFor="subject">Subject:</label>
+              {errors.subject ? <span className="error-message">{errors.subject}</span> : ''}
+              <input type="text" id="subject" placeholder="type here" name="subject" />
 
-            <label htmlFor="message">Your Message</label>
-            {errors.message ? <span className="error-message">{errors.message}</span> : ''}
-            <textarea id="message" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
-            <input type="submit" className="contact-btn" />
-            
-            {/* {submitStatus === false && (
-              <p className="submit-error">No bueno, retry.</p>
-            )} */}
+              <label htmlFor="message">Your Message:</label>
+              {errors.message ? <span className="error-message">{errors.message}</span> : ''}
+              <textarea id="message" cols="30" rows="8" placeholder="type here" name="message"></textarea>
+              <input type="submit" className="contact-btn" />
+              
+              {/* {submitStatus === false && (
+                <p className="submit-error">No bueno, retry.</p>
+              )} */}
           </form>
         ) : (     
           <div className="submit-status-cover">
@@ -149,19 +149,19 @@ export default ContactForm;
 //         <h3>Contact Us</h3>
 //         {!submitStatus? (
 //             <form className="contact-form" onSubmit={sendForm}>
-//             <label htmlFor="name">Name</label>
+//             <label htmlFor="name">Name:</label>
 //             {errors.name ? <span className="error-message">{errors.name}</span> : ''}
 //             <input type="text" id="name" placeholder="Name" name="name" />
 
-//             <label htmlFor="email">Email Address</label>
+//             <label htmlFor="email">Email Address:</label>
 //             {errors.email ? <span className="error-message">{errors.email}</span> : ''}
 //             <input type="email" id="email" placeholder="Email Address" name="email" />
 
-//             <label htmlFor="subject">Subject</label>
+//             <label htmlFor="subject">Subject:</label>
 //             {errors.subject ? <span className="error-message">{errors.subject}</span> : ''}
 //             <input type="text" id="subject" placeholder="Subject" name="subject" />
 
-//             <label htmlFor="message">Your Message</label>
+//             <label htmlFor="message">Your Message:</label>
 //             {errors.message ? <span className="error-message">{errors.message}</span> : ''}
 //             <textarea id="message" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
 //             <input type="submit" className="contact-btn" />

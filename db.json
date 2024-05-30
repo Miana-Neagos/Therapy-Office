@@ -17,6 +17,18 @@
       "password": "$2a$10$Z6wiVC32yN3GBCeLhKE9ceqGFiXxKBfq4PbMMfIEWvazUZUJrWWFi",
       "name": "gelu",
       "id": 3
+    },
+    {
+      "email": "petrica@gmail.com",
+      "password": "$2a$10$Cp8zrFKv6dGpOoS0IO0fzOV.yNs1SqMlbl8puWtAlEGILCzDGf3HK",
+      "name": "petrica",
+      "id": 4
+    },
+    {
+      "email": "bula@gmail.com",
+      "password": "$2a$10$pNd9kwRiqjjI4wLLfNDYA.c8QUiHvGNy3Z77QGHsfN0.P3I2a0LNG",
+      "name": "petrica",
+      "id": 5
     }
   ],
   "alinaS": [
