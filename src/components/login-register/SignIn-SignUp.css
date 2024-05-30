@@ -48,7 +48,8 @@
   }
   
   .toggle-btn {
-    width: 35%;
+    width: 27%;
+    min-width: 9rem;
     cursor: pointer;
     background: #c1cedb;
     color: #333;

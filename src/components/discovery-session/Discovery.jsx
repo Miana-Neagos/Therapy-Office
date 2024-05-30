@@ -58,7 +58,7 @@ function Discovery({ onClose }) {
           discovery session with one of our therapists.
         </p>
         <p>
-          We will contact you provided your phone number and email are correct.
+          We will contact you, provided your phone number and email are correct.
         </p>
 
         <label htmlFor="phoneNumber">Phone Number</label>

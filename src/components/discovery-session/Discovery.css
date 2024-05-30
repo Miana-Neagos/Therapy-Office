@@ -1,5 +1,5 @@
 .message-box {
-    background-color: #b0ced6;
+    background-color: #d8dbd7;
     border: 0.06rem solid #ccc;
     border-radius: 1rem;
     padding: 1rem;
@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     font-size: 0.8rem;
+    box-shadow: -17px -2px 20px 20px #ffffff;
   }
   
   .message-box .p-title {
@@ -39,6 +40,7 @@
   
   .message-box input {
     /* display: block; */
+    background-color: #ffffff;
     width: 60%;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
@@ -47,6 +49,7 @@
   }
   
   .message-box button {
+    background-color: #ffffff;
     width: 30%;
     padding: 0.5rem;
     margin: 0.5rem;
