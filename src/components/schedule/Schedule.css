@@ -1,55 +1,56 @@
 .hours-of-operation {
-  background-color: #b9b7b69c;
+  background-color: #b9b7b6d1;
   padding: 20px;
   border-radius: 10px;
-  color: #5A3421;
+  color: #331E13;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-width: 35vw; 
-  max-width: min-content; 
+  margin: 1rem auto;
+  width: 60vw;
 }
 
 .hours-of-operation h3 {
   text-align: center;
-  margin: 0rem;
+  margin: 0 0 1rem;
 }
 
 .hours-of-operation table {
   width: 100%;
-  text-align: left;
-  border-collapse: collapse;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* text-align: left; */
 }
 
 .hours-of-operation tbody {
-  width: 100%;
-  text-align: left;
-  margin-top: 0.4rem;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  font-size: 0.9rem;
   display: flex;
   flex-direction: row;
-}
-
-.hours-of-operation td {
-  flex: 1;
-  padding: 5px;
-  border-right: 1px solid;
-  font-weight: bolder;
+  justify-content: center; 
+  align-items: flex-start;
 }
 
 .hours-of-operation tr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  border-left: 1px solid;
+  /* border-right: 1px solid; */
+}
+
+.hours-of-operation td {
+  padding: 5px;
+  flex: 1;
+}
+
+.hours-of-operation tr:first-child {
+  border-left: none;
+}
+
+.hours-of-operation tr:last-child {
+  border-right: none;
 }
 
 .weekday {
   font-weight: bold;
 }
-
-/* .hours-of-operation tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.1); 
-  background-color: darkgray;
-} */

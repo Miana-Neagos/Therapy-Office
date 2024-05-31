@@ -28,7 +28,7 @@ function HomePage() {
             <Link to="/doc-selection">
               <button>Book Consultation</button>
             </Link>
-            <button onClick={startDiscovery}>15 Min Discovery</button>
+            <button onClick={startDiscovery}>20 Min Discovery</button>
           </div>
         </div>
         <QuickLinks />

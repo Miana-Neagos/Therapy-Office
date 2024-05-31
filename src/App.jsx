@@ -1,7 +1,7 @@
 import "./App.css";
 import { IconContext } from "react-icons";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 // import ManageBooking from "./components/booking/WIP-Booking";
 import ManageBooking from "./components/booking/WIP-Booking";
 import DocSelection from "./components/doc-selection/DocSelection";
@@ -23,6 +23,7 @@ function App() {
   const [auth, setAuth] = useState({ accessToken, userId });
   const [availableDates, setAvailableDates] = useState();
   const [appointments, setAppointments] = useState([]);
+  const navigate = useNavigate();
   console.log(accessToken);
   // console.log({auth});
   // console.log(auth.accessToken);
@@ -31,7 +32,7 @@ function App() {
   useEffect(() => {
     fetchAvailableDates(setAvailableDates);
     if (accessToken && userId) {
-      fetchAppointments(setAppointments,accessToken, userId)
+      fetchAppointments(setAppointments,accessToken, userId, navigate)
     }
   }, [accessToken, userId]);
 
@@ -50,7 +51,7 @@ function App() {
         <IconContext.Provider value={{}}>
         <BookingContext.Provider value={{ availableDates, setAvailableDates, appointments, setAppointments }}>
           {/* <BookingContext.Provider value={{ setAvailableDates, availableDates, userAppointments }}> */}
-            <BrowserRouter>
+            {/* <BrowserRouter> */}
               <NavBar />
               <Routes>
                 <Route path="/" element={<Home />}></Route>
@@ -66,7 +67,7 @@ function App() {
                 <Route path="/services" element={<Services />}></Route>
                 <Route path="/faq" element={<Faq />}></Route>
               </Routes>
-            </BrowserRouter>
+            {/* </BrowserRouter> */}
           </BookingContext.Provider>
         </IconContext.Provider>
       </AuthContext.Provider>

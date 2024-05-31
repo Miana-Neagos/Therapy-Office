@@ -17,7 +17,7 @@ export async function fetchAvailableDates(setAvailableDates) {
   }
 }
 
-export async function fetchAppointments(setAppointments, accessToken, userId) {
+export async function fetchAppointments(setAppointments, accessToken, userId, navigate) {
   console.log('this is FETCH APPOINTMENTS');
   console.log({accessToken});
   console.log({userId});
@@ -34,6 +34,9 @@ export async function fetchAppointments(setAppointments, accessToken, userId) {
       console.log(data);
       setAppointments(data);
     } 
+
+    if(response.status === 401)
+      navigate('login-register')
     // else {
     //   console.error("Failed to fetch appointments:", data.message);
     // }

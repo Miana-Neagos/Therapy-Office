@@ -52,10 +52,11 @@ function Discovery({ onClose }) {
   return (
     <div>
       <form className="message-box" onSubmit={sendReq}>
-        <p className="p-title">15 Min Discovery Session</p>
+        <p className="p-title">20 Min Discovery Session</p>
         <p>
-          Please fill in your email and phone number to request a 15 minutes
-          discovery session with one of our therapists.
+          People often feel a rainbow of emotions leading up to their first session
+          or even pondering if to start going down the road.
+          You can now request a 20 minutes discovery session with one of our therapists.
         </p>
         <p>
           We will contact you, provided your phone number and email are correct.

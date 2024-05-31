@@ -18,7 +18,7 @@
 
 .modal {
     margin: 0;
-    border: 5px solid #226b3429;
+    border: 4px solid #226b3429;
     background-color: #f8f8fa;
     border-radius: 0.7rem;
     padding: 2rem;
@@ -35,7 +35,7 @@
     /* display: flex; */
     /* flex-direction: row; */
     margin: 0.5rem;
-    background-color: #bcd5c6;
+    /* background-color: #bcd5c6; */
     padding: 10px 20px; 
     border: none;
     border-radius: 5px;
