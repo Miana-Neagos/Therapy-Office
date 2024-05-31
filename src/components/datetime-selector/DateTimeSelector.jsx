@@ -10,7 +10,8 @@ import PropTypes from "prop-types";
 
 function DateTimeSelector({ availableSlots, onSelect, auth }) {
   console.log('This is DATE TIME SELECTOR');
-  console.log(auth);
+  console.log({availableSlots});
+  // console.log(auth);
   // console.log({availableSlots});
   // console.log({onSelect});
   const [selectedDate, setSelectedDate] = useState(undefined);
@@ -41,6 +42,7 @@ function DateTimeSelector({ availableSlots, onSelect, auth }) {
   }, [selectedDateString, selectedTime, onSelect]);
 
   function manageTimeClick(event, time){
+    console.log({event});
     event.preventDefault();
     setSelectedTime(time);
   }

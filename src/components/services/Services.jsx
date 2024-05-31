@@ -6,7 +6,7 @@ function ServicesPage() {
     console.log({services});
   return (
     <div className="services-container">
-      <h1>REWIRE</h1>
+      <h1>FETELE CU PSIHO</h1>
       <div className="intro-services">
         <h2>
             Choose to start your journey towards better health and wellbeing!
@@ -18,7 +18,7 @@ function ServicesPage() {
             </p>
             <p>We enthusiastically share this passion!</p> */}
             <p>
-                At Rewire, we focus on improving mental skills and overall health. Our
+                In our practice we focus on improving mental skills and overall health. Our
                 care, knowledge, and support aim to help you thrive in all aspects of
                 your life.
             </p>

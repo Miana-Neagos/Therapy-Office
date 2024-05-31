@@ -11,11 +11,12 @@
   box-shadow: 20px -7px 10px 3px rgba(0, 123, 255, 0.5);
   border-radius: 15px;
   margin: 4rem 10rem;
+  color: #432b17;
 }
 
 .select-doc-p {
   font-weight: bold;
-  color: #603f22;
+  /* color: #603f22; */
   font-size: 1.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -66,10 +67,10 @@
 .therapist-selection span {
   display: block;
   font-weight: bold;
-  color: #4a4a4a;
   font-size: 2rem;
   margin-top: 0.5rem;
   transition: color 0.3s ease-in-out;
+  color: #432b17;
 }
 
 .therapist-option:hover span {

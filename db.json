@@ -11,24 +11,6 @@
       "password": "$2a$10$lioyXB7IsOzffSmQq6jo7uiq3uJpPxaMuQcZzhJEpJuiBNVT/1hmu",
       "name": "test3",
       "id": 2
-    },
-    {
-      "email": "gelu@gmail.com",
-      "password": "$2a$10$Z6wiVC32yN3GBCeLhKE9ceqGFiXxKBfq4PbMMfIEWvazUZUJrWWFi",
-      "name": "gelu",
-      "id": 3
-    },
-    {
-      "email": "petrica@gmail.com",
-      "password": "$2a$10$Cp8zrFKv6dGpOoS0IO0fzOV.yNs1SqMlbl8puWtAlEGILCzDGf3HK",
-      "name": "petrica",
-      "id": 4
-    },
-    {
-      "email": "bula@gmail.com",
-      "password": "$2a$10$pNd9kwRiqjjI4wLLfNDYA.c8QUiHvGNy3Z77QGHsfN0.P3I2a0LNG",
-      "name": "petrica",
-      "id": 5
     }
   ],
   "alinaS": [
@@ -414,11 +396,11 @@
         },
         {
           "time": "14:30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
-          "available": true
+          "available": false
         }
       ]
     },
@@ -904,7 +886,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14:30 - 15:30",
@@ -1016,7 +998,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -2354,22 +2336,8 @@
       "userId": 1,
       "therapist": "alinaS",
       "date": "31/05/2024",
-      "time": "14:30 - 15:30",
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "therapist": "alinaS",
-      "date": "27/06/2024",
-      "time": "12:00 - 13:00",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "therapist": "alinaS",
-      "date": "03/07/2024",
       "time": "15:30 - 16:30",
-      "id": 15
+      "id": 1
     }
   ]
 }
