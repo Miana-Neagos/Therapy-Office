@@ -4,7 +4,7 @@ import UserUpdates from "../b-user-appointments/UserAppointments"
 import DateTimeSelector from "../datetime-selector/DateTimeSelector";
 import { AuthContext, BookingContext } from "../../App";
 import { updateDB } from "./updateDB";
-import formatDate from "../lib/formatDate";
+import {formatDate} from "../lib/format-dates";
 import "./Booking.css";
 import ModalAction from "../modal/Modal";
 

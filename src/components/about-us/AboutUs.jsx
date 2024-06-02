@@ -75,7 +75,7 @@ function AboutUs() {
           </div>
         </div>
         <div className="qualifications">
-          <h2>Qualifications:</h2>
+          <h2>QUALIFICATIONS:</h2>
           <ul>
             <li>
               <strong>CBT Psychotherapist and Counselor</strong> – Training and
@@ -170,7 +170,7 @@ function AboutUs() {
           </div>
         </div>
         <div className="qualifications">
-          <h2>Qualifications:</h2>
+          <h2>QUALIFICATIONS:</h2>
           <ul>
             <li>
               <strong>CBT Psychotherapist and Counselor</strong> – Training and

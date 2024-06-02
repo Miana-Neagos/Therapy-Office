@@ -3,7 +3,7 @@ import "./UserAppointments.css";
 import { AuthContext, BookingContext } from "../../App";
 import PropTypes from "prop-types";
 import ModalAction from "../modal/Modal";
-import formatDate from "../lib/formatDate";
+import { formatDate, formatApptsString } from "../lib/format-dates";
 
 function UserUpdates({ onChange }) {
   console.log("this is USER UPDATES");
@@ -14,25 +14,39 @@ function UserUpdates({ onChange }) {
   const [selectedAppt, setSelectedAppt] = useState(null);
   const [error, setError] = useState(false);
   const [modalMsg, setModalMsg] = useState('');
-  console.log({ appointments });
+  console.log(appointments);
   console.log({ userAppointments });
   console.log(auth.userId);
 
   useEffect(() => {
     console.log('this is USE EFFECT');
     console.log(appointments);
-    if (appointments && auth.userId) {
-      const filteredApp = appointments.filter(appt => appt.userId === Number(auth.userId));
-      console.log(appointments.appt);
-      console.log({filteredApp});
+    if (appointments) {
+      const today = new Date();
+      console.log({today});
+      const filteredApp = appointments.filter(appt => {
+        const bookedDate = formatApptsString(appt.date);
+        return bookedDate >= today;
+      });
       setUserAppointments(filteredApp);
     }
-  }, [auth, appointments]);
+  }, [appointments]);
+
+  // useEffect(() => {
+  //   console.log('2ND USE EFFECT');
+  //   if (appointments && auth.userId) {
+  //     const today = new Date();
+  //     console.log({today});
+  //     const filtered = appointments.filter(elem => { 
+  //       console.log(elem.date);
+  //       const [day, month, year] = elem.date.split('/');
+
+  //       elem.userId === Number(auth.userId)
+  //     } )
+  //   }
+  // })
 
   async function deleteBooking(selectedAppt) {
-    // const userConfirmedAction = confirm('Are you sure you want to delete the appointment?');
-
-    // if (userConfirmedAction) {
       try {
         const response = await fetch(`http://localhost:3000/appointments/${selectedAppt.id}`, {
           method: "DELETE",

@@ -30,7 +30,6 @@
     top: 21%;
     left: 86%;
     text-align: justify;
-    max-width: 90%;
   }
   
   .person-info p {
@@ -52,7 +51,6 @@
   }
   
   .learn-more {
-    background-color: white;
     border-radius: 20px;
     padding: 10px 20px;
     color: white;
@@ -68,14 +66,12 @@
     align-items: center;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    /* padding: 1rem; */
   }
   
   .tools-section {
     background-color: white;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 20px; */
     padding: 1rem;
     text-align: center;
     border-radius: 20px;
@@ -87,7 +83,7 @@
       to bottom right,
       #a9c0ab,
       #ffffff
-    ); /* Added gradient background */
+    ); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -122,4 +118,104 @@
   
   .qualifications li {
     margin-bottom: 0.7rem;
+  }
+
+@media (max-width: 2000px) {  
+    .person-info {
+      top: 9%;
+      left: 80%;
+    }
+  
+    .name {
+      font-size: 1.8rem;
+    }
+    .person-info h1 {
+      font-size: 1.8rem; 
+    }
+  
+    .tools-section {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .qualifications h2 {
+      font-size: 1.5rem;
+    }
+  
+    .qualifications ul {
+      line-height: 2;
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    .person-info {
+      top: 5%;
+      left: 80%;
+    }
+  
+    .name {
+      font-size: 1.5rem;
+    }
+    .person-info h1 {
+      font-size: 1.5rem;
+    }
+  
+    .person-info p {
+      font-size: 1rem;
+    }
+  
+    .tools-section {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+  
+    .tool {
+      font-size: 1rem;
+  
+    }
+  
+    .qualifications h2 {
+      font-size: 1.5rem;
+    }
+  
+    .qualifications ul {
+      line-height: 2;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .alina,
+    .andra {
+      width: 70%;
+      align-content: flex-start;
+    }
+  
+    .person-image {
+      border-top-left-radius: 15rem;
+      width: 60%;
+      height: auto;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .person-info {
+      width: 65%;
+      top: 0;
+      left: 50%;
+    }
+  
+    .name {
+      font-size: 1rem;
+    }
+  
+    .person-info h1 {
+      font-size: 1rem;
+    }
+
+    .person-info p {
+      font-size: 0.85rem;
+    }
+
+    .qualifications ul{
+      font-size: 0.9rem;
+    }
   }
