@@ -478,7 +478,7 @@
         },
         {
           "time": "15:30 - 16:30",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -618,7 +618,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -1906,7 +1906,7 @@
         },
         {
           "time": "14.30 - 15:30",
-          "available": true
+          "available": false
         },
         {
           "time": "15:30 - 16:30",
@@ -2032,7 +2032,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": true
+          "available": false
         },
         {
           "time": "14.30 - 15:30",
@@ -2349,16 +2349,30 @@
     {
       "userId": 2,
       "therapist": "alinaS",
-      "date": "05/06/2024",
-      "time": "15:30 - 16:30",
-      "id": 3
+      "date": "22/05/2024",
+      "time": "14:30 - 15:30",
+      "id": 4
     },
     {
       "userId": 2,
       "therapist": "alinaS",
-      "date": "22/05/2024",
-      "time": "14:30 - 15:30",
-      "id": 4
+      "date": "13/06/2024",
+      "time": "10:00 - 11:00",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "therapist": "andraC",
+      "date": "20/06/2024",
+      "time": "14.30 - 15:30",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "therapist": "andraC",
+      "date": "27/06/2024",
+      "time": "12:00 - 13:00",
+      "id": 8
     }
   ]
 }

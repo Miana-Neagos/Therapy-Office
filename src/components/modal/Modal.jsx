@@ -10,7 +10,7 @@ function ModalAction({message, onCancel, onConfirm, error}) {
                 <p>{message}</p>
                 <div className='modal-buttons'>
                         <button onClick={msgCheck(message) ? onCancel : onConfirm}>
-                            {msgCheck(message) ? 'Close' : (error ? 'Close' : 'Yes')}
+                            {msgCheck(message) ? 'Ok' : (error ? 'Ok' : 'Yes')}
                         </button>
 
                         {!msgCheck(message) && <button onClick={onCancel}>No</button>}

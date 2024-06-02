@@ -2,6 +2,7 @@ import React from "react";
 import "./Faq.css";
 import { Link } from "react-router-dom";
 
+// FAQ components created for some predefined questions and answers that might come in handy for site visitors
 function Faq() {
   return (
     <div className="faq-wrapper">

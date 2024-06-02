@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser"; // need to import EmailJS library for sending emails
 import {validateForm} from "../lib/data-validation";
 import "./Discovery.css";
 
+// the component offers functionality for a home page button that sends a message with 2 inputs from the user along with some predefined data
 function Discovery({ onClose }) {
+  // below state manage errors from form validation
   const [error, setErrors] = useState({});
 
   async function sendReq(e) {
     e.preventDefault();
 
     const formElement = e.target;
-    console.log({ formElement });
-
     const { email, phoneNumber } = formElement;
+    //final format for data to be sent via EmailJS
     const formData = {
       name: "Discovery Request",
       email: email.value,
@@ -22,16 +23,15 @@ function Discovery({ onClose }) {
       phoneNumber: phoneNumber.value,
     };
 
-    console.log({ formData });
-
+    // using a validation form data function and set errors if any -see "lib" folder for validation function
     const validationErrors = validateForm(formData);
-    console.log({ validationErrors });
 
-    //Object,keys() - get the number of keys present in the object -make use of the length of the object
+    // function checks for any errors inside the errors object, function is exited  if any validation errors - errors object must be empty to proceed to sending the form
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
+    // send the form data using EmailJS service
     try {
       const response = await emailjs.send(
         "service_bkdsijs",
@@ -42,6 +42,7 @@ function Discovery({ onClose }) {
       if (response.status === 200) {
         alert("Request successfully sent!");
         formElement.reset();
+        //call onClose to close the form
         onClose();
       }
     } catch (error) {

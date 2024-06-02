@@ -10,8 +10,8 @@
 
 .faq-container h1 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 1em;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #2c3e50;
 }
 
@@ -20,13 +20,13 @@
 }
 
 .faq-item h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 1.6rem;
     color: #2c3e50;
 }
 
 .faq-item p {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1.6rem;
 }
@@ -37,28 +37,28 @@
     }
 
     .faq-container h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
     .faq-item h2 {
-        font-size: 1.3em;
+        font-size: 1.3rem;
     }
 
     .faq-item p {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 600px) {
     .faq-container h1 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
 
     .faq-item h2 {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     }
 
     .faq-item p {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 }

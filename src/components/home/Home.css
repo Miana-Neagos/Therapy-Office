@@ -1,5 +1,4 @@
 .start-now-section {
-  /* width: 62%; */
   margin: 10rem auto;
   display: flex;
   flex-direction: column;
@@ -7,14 +6,8 @@
   align-items: center;
   color: white;
   text-align: center;
-  /* border-radius: 10px; */
   background-color: rgba(255, 255, 255, 0.7);
 }
-
-/* .start-now-section.transparent {
-  background-color: white;
-  opacity: 0.7;
-} */
 
 .start-now-section h1,
 .start-now-section h2
@@ -26,7 +19,7 @@
 
 .start-now-section .buttons {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   border-radius: 0.2rem;
   margin: 1rem auto;
 }

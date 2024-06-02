@@ -3,7 +3,6 @@
     border: 0.06rem solid #ccc;
     border-radius: 1rem;
     padding: 1rem;
-    box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 40%;
     left: 64%;
@@ -32,14 +31,12 @@
   }
   
   .message-box label {
-    /* display: block; */
     margin-bottom: 5px;
     font-weight: bold;
     color: #331e13;
   }
   
   .message-box input {
-    /* display: block; */
     background-color: #ffffff;
     width: 60%;
     padding: 0.5rem;

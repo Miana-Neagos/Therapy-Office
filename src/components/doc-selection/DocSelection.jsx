@@ -3,6 +3,7 @@ import alina from "../../assets/pic3.jpg";
 import andra from "../../assets/pic3.jpg";
 import "./DocSelection.css";
 
+//DocSelection offers some UI candy for the user together with selecting a therapist that is further send as a parameter to "Manage-Booking" component
 function DocSelection() {
   const navigate = useNavigate();
 
@@ -12,9 +13,9 @@ function DocSelection() {
     {id: 'andraC', name: 'Andra Costin', img: andra}
   ]
 
+  //handle therapist selection and navigate to the booking page for the selected therapist
   function pickDoc(therapistId) {
-    console.log('This is DOC SELECTION');
-    console.log({ therapistId });
+    //navigate to the booking page with the selected therapist's ID
     navigate(`/booking/${therapistId}`);
   }
 
@@ -24,7 +25,6 @@ function DocSelection() {
 
       <div className="therapist-selection">
         {therapists.map(({id, name, img}) => (
-          // eslint-disable-next-line react/jsx-key
           <button key={id} className='therapist-option' onClick={() => pickDoc(id)}>
             <img id={id} src={img} alt={name}/>
           <span> {name} </span>

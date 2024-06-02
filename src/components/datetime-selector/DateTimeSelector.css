@@ -1,4 +1,4 @@
-/* Styling for React Calendar */
+/* styling for React Calendar - additional to predefined CSS offered be the package (where I've also made modifications) */
 .react-calendar {
   border-radius: 8px;
   box-shadow: 0px -8px 20px 0px rgb(187 220 255);
@@ -15,7 +15,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 2rem; */
   margin: 1.3rem 1rem 0 1rem;
 }
 .time-slot-container,
@@ -23,22 +22,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin: 1rem;
-}
-
-.time-slot-container,
-.time-slot-buttons {
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.time-slot-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center; /* Center the buttons */
-  margin-top: 1rem;
+  gap: 2rem;
+  margin: 1rem;
 }
 
 .time-slot-buttons button {
@@ -52,10 +39,8 @@
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 1rem;
   font-weight: 600;
-  /* line-height: 2.5rem; */
   text-align: center;
   color: #603f22e3;
-  /* color: #2f7330; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,7 +54,7 @@
 
 .time-slot-buttons button:hover:not(:disabled) {
   background: linear-gradient(0deg, #e0e0e0, #bdbdbd);
-  transform: scale(1.04);
+  transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -92,12 +77,10 @@
 }
 
 .instruction p {
-  /* font-weight: bold; */
   font-size: 1.1rem;
   margin: 0;
   color: #7f7979;
   font-weight: bold;
-  /* padding: 0.5rem; */
 }
 
 .booking-icon {

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "./MPlayer.css";
 
+//MusicPlayer component provides a simple interface for playing and stopping meditation music.
+// component utilizes the ReactPlayer library to embed and control a YouTube video
 function MusicPlayer() {
-  // console.log("MusicPlayer component is rendered");
+  //state to manage the play/pause status of the music
   const [isPlaying, setIsPlaying] = useState(false);
-
+  //toggle the play/pause state
   function togglePlay() {
     setIsPlaying(!isPlaying);
   }
