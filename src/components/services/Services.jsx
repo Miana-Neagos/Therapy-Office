@@ -9,7 +9,7 @@ import { services } from "../lib/services";
 function ServicesPage() {
   return (
     <div className="services-container">
-      <h1>FETELE CU PSIHO</h1>
+      <h1>MIND PUZZLE</h1>
       <div className="intro-services">
         <h2>
           Choose to start your journey towards better health and wellbeing!
