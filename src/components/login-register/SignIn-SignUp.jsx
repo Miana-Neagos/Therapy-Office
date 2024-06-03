@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../App';
 import {validateForm} from '../lib/data-validation'
 
+//function manages both sign in an sign up by toggling the UI between two display types. 
 function LoginRegister() {
   const [signUpMode, setSignUp] = useState(false);
-  const {setAuth} = useContext(AuthContext)
+  const {setAuth} = useContext(AuthContext);
   const navigate = useNavigate();
   //below errors are connected to the register-authenticate file, where signIn & signUp functions reside
   const [serverErr , setServerErr] = useState(null);
@@ -16,9 +17,9 @@ function LoginRegister() {
   const [successMsg, setSuccessMsg] = useState(null)
  
   // catch a reference to the form element using "useRef" hook
-  // Create a reference to the form
   const formRef = useRef();
 
+  //toggle between sign-in and sign-up modes and reset form and error messages
   function toggleSignInUp() {
     setSignUp(!signUpMode);
     formRef.current.reset();
@@ -28,6 +29,7 @@ function LoginRegister() {
     setSuccessMsg(null);
   }
 
+  //manage form submission depending on user action: login or register
   function handleSubmit(e) {
     e.preventDefault();
     setServerErr(null);
@@ -47,7 +49,6 @@ function LoginRegister() {
 
     if (signUpMode) {
       if (password.value !== retypePassword.value) {
-        // console.warn("Passwords don't match!");
         setPassErr("Passwords don't match!");
         return;
       }
@@ -109,13 +110,12 @@ function LoginRegister() {
               <input type="password" id="password" name="password" />
               
               <button type="submit" className="submit">Sign In</button>
-              {/* <p className="forgot-pass">Forgot password?</p> */}
             </>
           )}
         </form>
        )}
       {successMsg? '' :
-        <div className="img">
+        <div className="toggle-container">
           <h3>{signUpMode ? 'Already have an account?' : "Don't have an account?"}</h3>
           <button className="toggle-btn" onClick={toggleSignInUp}>
             {signUpMode ? 'Sign In' : 'Sign Up'}

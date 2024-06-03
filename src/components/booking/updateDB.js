@@ -1,4 +1,10 @@
-// this function updates the availability of appointment slots in the database, for specific/targeted therapist and date
+/**
+* Updates the database with the new availability data for a specific therapist on a specific date.
+* 
+*   appointment - The appointment details containing the therapist and date.
+* updatedDates - The updated availability data for all therapists.
+*  token - The authentication token for the API request.
+*/
 
 export async function updateDB(appointment, updatedDates, token) {
   const {therapist , date} = appointment;

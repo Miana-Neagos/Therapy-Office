@@ -1,6 +1,9 @@
-// import './Schedule.css'
-import './test.css'
+import './Schedule.css'
 
+/**
+ * The Schedule component displays the working hours for each day of the week.
+ * It uses a table to layout the days and their corresponding hours.
+ */
 function Schedule() {
   return (
     <div className="hours-of-operation">

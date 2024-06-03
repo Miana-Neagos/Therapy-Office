@@ -1,7 +1,9 @@
 import './Modal.css';
 import PropTypes from 'prop-types';
 
+// Function component renders a modal dialog box with configurable messages and actions
 function ModalAction({message, onCancel, onConfirm, error}) {
+    // Helper function to check if the message is one of the success messages
     const msgCheck = message => message=== 'Appointment deleted successfully.' || message === 'Appointment added successfully.';
 
     return (

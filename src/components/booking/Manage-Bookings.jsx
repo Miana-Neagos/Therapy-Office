@@ -8,9 +8,10 @@ import {formatDate} from "../lib/format-dates";
 import "./Booking.css";
 import ModalAction from "../modal/Modal";
 
-// "Manage-Booking" component facilitates the booking and management of appointments by allowing users to interact with separate components also, like "USerAppointment" and "DateTimeSelector" 
-// functionality: select available slots, submit new bookings, and view or delete existing appointments
-
+/**
+ * "Manage-Booking" component facilitates the booking and management of appointments by allowing users to interact with separate components also, like "USerAppointment" and "DateTimeSelector" 
+ * *functionality: select available slots, submit new bookings, and view or delete existing appointments
+*/ 
 function ManageBooking() {
   const { auth } = useContext(AuthContext);
   const { therapist } = useParams();
@@ -82,8 +83,6 @@ function ManageBooking() {
       setViewModal(true);
 
     } catch (error) {
-      console.error('Error adding appointment:', error);
-
       // triggers for modal interaction
       setModalMsg('Booking failed. Please refresh and try again.')
       setError(true);
@@ -91,8 +90,10 @@ function ManageBooking() {
     }
   }
 
-  // Function updates the state for overall availabilities db ("availableDates")  based on actions such as adding or deleting an appointment
-  // receives params from both "deleteBooking" from component "UserAppointments"  as well ass "bookingSubmit" function from existing component
+  /**
+  * Function updates the state for overall availabilities db ("availableDates")  based on actions such as adding or deleting an appointment
+  *receives params from both "deleteBooking" from component "UserAppointments"  as well ass "bookingSubmit" function from existing component
+  */
   function updateAvailableDates(appointment, action) {
     setAvailableDates(prevDates => {
       //creates a copy of the previous dates state

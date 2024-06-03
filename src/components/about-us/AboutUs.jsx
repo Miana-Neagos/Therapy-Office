@@ -2,6 +2,13 @@ import "./AboutUs.css";
 import alina from "../../assets/pic3.jpg";
 import andra from "../../assets/pic3.jpg";
 
+/**
+ * The AboutUs component provides detailed profiles for two therapists, Alina Salomie and Andra Costin.
+ * It includes their introductions, personal philosophies, therapeutic approaches, and professional qualifications.
+ */
+
+// next step is to MOVE THERAPIST DATA to server and fetch it for UI rendering
+
 function AboutUs() {
   return (
     <div className="about-us-container">

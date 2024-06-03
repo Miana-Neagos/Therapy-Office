@@ -2,8 +2,11 @@ import React from "react";
 import "./Services.css";
 import { services } from "../lib/services";
 
+/**
+ * The ServicesPage component displays a list of mental health services.
+ * Each service includes a title and a description.
+ */
 function ServicesPage() {
-  console.log({ services });
   return (
     <div className="services-container">
       <h1>FETELE CU PSIHO</h1>
@@ -12,11 +15,6 @@ function ServicesPage() {
           Choose to start your journey towards better health and wellbeing!
         </h2>
         <div>
-          {/* <p>
-                People strive for meaningful and fulfilling lives, seeking happiness,
-                self-improvement, and growth.
-            </p>
-            <p>We enthusiastically share this passion!</p> */}
           <p>
             In our practice we focus on improving mental skills and overall
             health. We help you cut the crap, see things as they truly are and

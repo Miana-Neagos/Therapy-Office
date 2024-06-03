@@ -27,7 +27,10 @@ function ContactForm() {
     // using a validation form data function and set errors if any -see "lib" folder for validation function
     const validationErrors = validateForm(formData);
     
-    // function checks for any errors inside the errors object, function is exited  if any validation errors - errors object must be empty to proceed to sending the form
+    /**
+    * function checks for any errors inside the errors object, function is exited  if any validation errors 
+    * errors object must be empty to proceed to sending the form 
+    */
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return; 

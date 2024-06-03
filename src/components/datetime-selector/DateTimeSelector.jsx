@@ -4,10 +4,11 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import PropTypes from "prop-types";
-
-// DateTimeSelector component renders the React Calendar in the UI,  allows users to select a date and time from available slots and communicates with "ManageBooking"
-// "onSelect" allows the DateTimeSelector to communicate the selected date and time back to its parent component(ManageBooking)
-
+/** 
+ * DateTimeSelector component renders the React Calendar in the UI,  allows users to select a date and time from available slots 
+ * and communicates with "ManageBooking"
+ * "onSelect" allows the DateTimeSelector to communicate the selected date and time back to its parent component(ManageBooking)
+*/
 function DateTimeSelector({ availableSlots, onSelect, auth }) {
   const [selectedDate, setSelectedDate] = useState(undefined);
   const [selectedTime, setSelectedTime] = useState(undefined);
@@ -30,7 +31,6 @@ function DateTimeSelector({ availableSlots, onSelect, auth }) {
   }, [selectedDateString, selectedTime, onSelect]);
 
   function manageTimeClick(event, time) {
-    console.log({ event });
     event.preventDefault();
     setSelectedTime(time);
   }

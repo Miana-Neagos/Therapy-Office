@@ -11,6 +11,12 @@
       "password": "$2a$10$lioyXB7IsOzffSmQq6jo7uiq3uJpPxaMuQcZzhJEpJuiBNVT/1hmu",
       "name": "test3",
       "id": 2
+    },
+    {
+      "email": "gelu@gmail.com",
+      "password": "$2a$10$oc8eUOWWoKUoAqVeTa7Aiuj2VD5Mcks4ZeQX6b/EzY6bUBTBZ.JYG",
+      "name": "gelu",
+      "id": 3
     }
   ],
   "alinaS": [
@@ -618,7 +624,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": false
+          "available": true
         },
         {
           "time": "11:00 - 12:00",
@@ -644,7 +650,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -756,7 +762,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": true
+          "available": false
         },
         {
           "time": "14:30 - 15:30",
@@ -1660,7 +1666,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -1764,7 +1770,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -1906,7 +1912,7 @@
         },
         {
           "time": "14.30 - 15:30",
-          "available": false
+          "available": true
         },
         {
           "time": "15:30 - 16:30",
@@ -1932,7 +1938,7 @@
         },
         {
           "time": "14.30 - 15:30",
-          "available": true
+          "available": false
         },
         {
           "time": "15:30 - 16:30",
@@ -2032,7 +2038,7 @@
         },
         {
           "time": "12:00 - 13:00",
-          "available": false
+          "available": true
         },
         {
           "time": "14.30 - 15:30",
@@ -2050,7 +2056,7 @@
       "slots": [
         {
           "time": "10:00 - 11:00",
-          "available": true
+          "available": false
         },
         {
           "time": "11:00 - 12:00",
@@ -2354,25 +2360,39 @@
       "id": 4
     },
     {
+      "userId": 1,
+      "therapist": "andraC",
+      "date": "07/06/2024",
+      "time": "10:00 - 11:00",
+      "id": 9
+    },
+    {
+      "userId": 2,
+      "therapist": "andraC",
+      "date": "21/06/2024",
+      "time": "14.30 - 15:30",
+      "id": 11
+    },
+    {
       "userId": 2,
       "therapist": "alinaS",
-      "date": "13/06/2024",
+      "date": "14/06/2024",
       "time": "10:00 - 11:00",
-      "id": 5
+      "id": 12
     },
     {
       "userId": 2,
-      "therapist": "andraC",
+      "therapist": "alinaS",
       "date": "20/06/2024",
-      "time": "14.30 - 15:30",
-      "id": 6
+      "time": "12:00 - 13:00",
+      "id": 13
     },
     {
       "userId": 2,
       "therapist": "andraC",
-      "date": "27/06/2024",
-      "time": "12:00 - 13:00",
-      "id": 8
+      "date": "28/06/2024",
+      "time": "10:00 - 11:00",
+      "id": 14
     }
   ]
 }

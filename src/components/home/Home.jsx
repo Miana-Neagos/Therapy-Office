@@ -9,7 +9,7 @@ import Discovery from "../discovery-session/Discovery";
 
 //HomePage component serves as the main landing page of the application, providing users with quick access to various features
 function HomePage() {
-  //ste to manage the visibility(UI rendering) of the Discovery component
+  //state to manage the visibility(UI rendering) of the Discovery component
   const [showBox, setShowBox] = useState(false);
 
   // below two functions are create for toggling the box for the "20 min discovery session"

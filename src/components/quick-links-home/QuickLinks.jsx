@@ -4,6 +4,10 @@ import { IconContext } from "react-icons";
 import { FaQuestionCircle, FaInfoCircle, FaBook, FaYoutube } from "react-icons/fa";
 import "./QuickLinks.css"; 
 
+/**
+ * The QuickLinks component provides a set of quick navigation links
+ * to various sections of the website and an external YouTube playlist.
+ */
 function QuickLinks() {
   const playlistUrl = 'https://www.youtube.com/watch?v=R4B9BPBiIHo&list=PLT2eOpjZ2tjeUbeo7uM27a1Ysbk4FAs9J'
 

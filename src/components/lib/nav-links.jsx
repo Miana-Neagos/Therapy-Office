@@ -1,14 +1,16 @@
 import { GiHouse, GiClick, GiBodySwapping, GiKey, GiChatBubble } from 'react-icons/gi';
 import { FaCalendarAlt } from "react-icons/fa";
 
+/**
+ * Generates an array of navigation link objects for use in the navigation bar.
+ * 
+ * @param {Object} auth - Authentication object containing access token.
+ * @param {Function} toggleLogin - Function to toggle login/logout state.
+ * @param {Function} closeMobileMenu - Function to close the mobile menu.
+ * @returns {Array} Array of navigation link objects.
+ */
+
 function navLinks(auth, toggleLogin, closeMobileMenu) {
-  // console.log('this is NAV LINKS');
-  // console.log({auth});
-  if (auth.accessToken) {
-    // console.log('button is LOGOUT');
-  } else {
-    // console.log('button is LOGIN');
-  }
 
   return [
     { title: 'Home', path: '/', icon: <GiHouse />, onClick: closeMobileMenu },

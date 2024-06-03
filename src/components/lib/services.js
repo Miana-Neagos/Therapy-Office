@@ -1,3 +1,6 @@
+// The services array contains a list of therapy services offered, each with a title and a description.
+// This array is used within the Services component to display the different types of therapy available to users.
+
 export const services = [
     {
       title: "DEPRESSION",
@@ -49,4 +52,3 @@ export const services = [
     }
   ];
 
-//   console.log({services});

@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "./MPlayer.css";
 
-//MusicPlayer component provides a simple interface for playing and stopping meditation music.
-// component utilizes the ReactPlayer library to embed and control a YouTube video
+/**
+ * MusicPlayer component provides a simple interface for playing and stopping meditation music.
+ * component utilizes the ReactPlayer library to embed and control a YouTube video
+ */
 function MusicPlayer() {
   //state to manage the play/pause status of the music
   const [isPlaying, setIsPlaying] = useState(false);
@@ -38,60 +40,3 @@ function MusicPlayer() {
 }
 
 export default MusicPlayer;
-
-
-
-
-
-
-
-
-
-
-
-// import { useRef, useState } from "react";
-// import "./MPlayer.css";
-
-// function MusicPlayer() {
-//   const playerRef = useRef(null);
-//   const [isPlaying, setIsPlaying] = useState(false);
-
-//   function togglePlay() {
-//     if (isPlaying) {
-//       // Stop the YouTube playlist
-//       playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E";
-//     } else {
-//       // Play the YouTube playlist
-//       playerRef.current.src = "https://www.youtube.com/embed/15tVFFGsI1E?autoplay=1";
-//     }
-//     setIsPlaying(!isPlaying);
-//   }
-
-//   return (
-//     <div className="music-player-container">
-//       <div className="player-content">
-//         <h3>HOW ARE YOU TODAY?</h3>
-//         <p>Take a moment to reflect on your thoughts and emotions.</p>
-//         <p>
-//           Whether joy, stress, or something in between, acknowledging your
-//           feelings is the first step towards understanding yourself better.
-//         </p>
-//         <p>Immerse yourself in meditation music and explore your thoughts.</p>
-//         <button className="play-button" onClick={togglePlay}>
-//           {isPlaying ? "Stop" : "Play"}
-//           {/* <iframe
-//             ref={playerRef}
-//             width="0"
-//             height="0"
-//             src="https://www.youtube.com/embed/15tVFFGsI1E"
-//             title="YouTube video player"
-//             allow="autoplay; encrypted-media"
-//           ></iframe> */}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default MusicPlayer;
-

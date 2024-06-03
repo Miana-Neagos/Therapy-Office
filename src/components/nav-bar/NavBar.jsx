@@ -9,7 +9,12 @@ import { IconContext } from "react-icons";
 import navLinks from "../lib/nav-links";
 import { AuthContext } from '../../App';
 
+/**
+ * The NavBar component provides a responsive navigation bar that displays 
+ * different navigation links based on the user's authentication status.
+ */
 function NavBar() {
+   // State to manage the mobile menu toggle
   const [click, setClick] = useState(false);
   const { auth, setAuth } = useContext(AuthContext);
 
@@ -19,6 +24,11 @@ function NavBar() {
   // sets the click state to false, closing the mobile menu
   const closeMobileMenu = () => setClick(false);
 
+   /**
+   * Function to handle the sign-in/sign-out logic.
+   * If user is authenticated, it clears the authentication state and removes tokens from local storage.
+   * Then it closes the mobile menu.
+   */
  function toggleSignInUp(){
     if (auth) {
       setAuth('');
