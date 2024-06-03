@@ -7,7 +7,7 @@ import emailjs from "@emailjs/browser"; // need to import EmailJS library for se
 function ContactForm() {
   // below states manage errors from form validation and form submission status
   const [errors, setErrors] = useState({});
-  const [submitStatus, setSubmitStatus] = useState();
+  const [submitStatus, setSubmitStatus] = useState(false);
 
   // function to handle form submission
   async function sendForm(e) {

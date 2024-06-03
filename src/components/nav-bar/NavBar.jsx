@@ -47,7 +47,7 @@ function NavBar() {
           <div className="navbar-container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               <GiPuzzle className="navbar-icon" />
-              <p>Fetele cu Psiho</p>
+              <p>Mind Puzzle</p>
             </Link>
             <div className="short-menu" onClick={toggleClick}>
               {click ? <IoCloseCircle className="short-menu-icon"/> : <RxDropdownMenu className="short-menu-icon"/>}
