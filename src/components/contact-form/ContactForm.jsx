@@ -64,22 +64,27 @@ function ContactForm() {
         <h3>Contact Us</h3>
         {!submitStatus? (
             <form className="contact-form" onSubmit={sendForm}>
-              <label htmlFor="name">Name:</label>
-              {errors.name ? <span className="error-message">{errors.name}</span> : ''}
-              <input type="text" id="name" placeholder="type here" name="name" />
+              <div className="fieldset-container">
+                <fieldset className="fieldset1">
+                  <label htmlFor="name">Name:</label>
+                  {errors.name ? <span className="error-message">{errors.name}</span> : ''}
+                  <input type="text" id="name" placeholder="type here" name="name" />
 
-              <label htmlFor="email">Email Address:</label>
-              {errors.email ? <span className="error-message">{errors.email}</span> : ''}
-              <input type="email" id="email" placeholder="type here" name="email" />
+                  <label htmlFor="email">Email Address:</label>
+                  {errors.email ? <span className="error-message">{errors.email}</span> : ''}
+                  <input type="email" id="email" placeholder="type here" name="email" />
 
-              <label htmlFor="subject">Subject:</label>
-              {errors.subject ? <span className="error-message">{errors.subject}</span> : ''}
-              <input type="text" id="subject" placeholder="type here" name="subject" />
-
-              <label htmlFor="message">Your Message:</label>
-              {errors.message ? <span className="error-message">{errors.message}</span> : ''}
-              <textarea id="message" cols="30" rows="8" placeholder="type here" name="message"></textarea>
-              <input type="submit" className="contact-btn" />
+                  <label htmlFor="subject">Subject:</label>
+                  {errors.subject ? <span className="error-message">{errors.subject}</span> : ''}
+                  <input type="text" id="subject" placeholder="type here" name="subject" />
+                </fieldset>
+                <fieldset className="fieldset2">
+                  <label htmlFor="message">Your Message:</label>
+                  {errors.message ? <span className="error-message">{errors.message}</span> : ''}
+                  <textarea id="message" cols="30" rows="8" placeholder="type here" name="message"></textarea>
+                </fieldset>
+              </div>
+              <input type="submit" id="contact-btn" />
           </form>
         ) : (     
           <div className="submit-status-cover">

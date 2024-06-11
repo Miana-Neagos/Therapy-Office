@@ -13,29 +13,25 @@ function QuickLinks() {
 
   return (
     <div className="quick-links">
-      <IconContext.Provider value={{ size: "3em" , color:'#603f22'}}>
+      <IconContext.Provider value={{ size: "2em" , color:'#603f22'}}>
         <div>
-          <FaBook />
           <Link to="/services">
-            <button>Services</button>
+            <button> <FaBook /> Services</button>
           </Link>
         </div>
         <div>
-          <FaQuestionCircle />
           <Link to="/faq">
-            <button>FAQ</button>
+            <button> <FaQuestionCircle /> FAQ</button>
           </Link>
         </div>
         <div>
-          <FaInfoCircle />
           <Link to="/about-us">
-            <button>About Us</button>
+            <button> <FaInfoCircle /> About Us</button>
           </Link>
         </div>
         <div>
-          <FaYoutube />
           <a href={playlistUrl} target="_blank">
-            <button>How Therapy Works</button>
+            <button><FaYoutube /> How Therapy Works</button>
           </a>
         </div>
       </IconContext.Provider>

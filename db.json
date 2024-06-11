@@ -11,6 +11,11 @@
       "password": "$2a$10$lioyXB7IsOzffSmQq6jo7uiq3uJpPxaMuQcZzhJEpJuiBNVT/1hmu",
       "name": "test3",
       "id": 2
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$3.6CZOUNvK/z/4atAHGfku4xrohVKxtTBWN1RxiUYeM5imPVk7DC.",
+      "id": 3
     }
   ],
   "alinaS": [
