@@ -13,7 +13,7 @@ function QuickLinks() {
 
   return (
     <div className="quick-links">
-      <IconContext.Provider value={{ size: "2em" , color:'#603f22'}}>
+      <IconContext.Provider value={{ size: "2em" , color:'#4a726c'}}>
         <div>
           <Link to="/services">
             <button> <FaBook /> Services</button>

@@ -5,7 +5,7 @@ import DateTimeSelector from "../datetime-selector/DateTimeSelector";
 import { AuthContext, BookingContext } from "../../App";
 import { updateDB } from "./updateDB";
 import {formatDate} from "../lib/format-dates";
-import "./Booking.css";
+import "./Manage-Booking.css";
 import ModalAction from "../modal/Modal";
 
 /**

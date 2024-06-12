@@ -10,7 +10,7 @@
   min-width: 60vw;
   max-width: min-content; 
   margin: 4rem auto;
-  color: #331e13;
+  color: #603f22;
 }
 
 .contact-form {
@@ -22,7 +22,7 @@
 .contact-form label {
   margin: 0.1rem 0.3rem;
   font-weight: bold;
-  color: #331e13;
+  color: #603f22;
 }
 
 .contact-form input {
@@ -66,7 +66,7 @@ fieldset {
 
 #contact-btn {
   background-color: #e3e6e4;
-  color: #7A7174;
+  color: #603f22;
   border: 2px solid #ffac00a3;
   border-radius: 2rem;
   padding: 0.5rem 1.8rem;
@@ -78,6 +78,7 @@ fieldset {
   max-width: 30%;
   max-height: 25%;
   background-image: linear-gradient(to bottom, #e3e6e4 0%, #b2b6b4 50%, #e3e6e4 100%);
+  transition: 0.2s ease-in-out;
 }
 
 #contact-btn:hover {

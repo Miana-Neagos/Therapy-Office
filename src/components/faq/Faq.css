@@ -31,7 +31,7 @@
     margin-bottom: 1.6rem;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .faq-container {
         padding: 1.6rem;
     }
@@ -49,7 +49,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .faq-container h1 {
         font-size: 1.8rem;
     }

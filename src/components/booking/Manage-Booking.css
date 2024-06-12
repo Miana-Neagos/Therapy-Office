@@ -20,18 +20,15 @@
 .booking-container h1,
 .booking-container h2 {
   margin: 0 0 1rem;
-  color: #603f22;
 }
 
 .booking-container > p {
-  color: #7f7979;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 .selection {
   font-weight: bold;
-  color: #7f7979;
   font-size: 1.2rem;
   margin: 1.5rem auto;
 }

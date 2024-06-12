@@ -5,13 +5,13 @@
     text-align: center;
     max-width: 85%;
     margin: 2rem auto;
-    color: #432b17;
+    color: #603f22;
 }
 
 .intro-services {
     margin-bottom: 4rem;
     background-color: white;
-    opacity: 0.7;
+    opacity: 0.75;
     padding: 1rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -50,11 +50,11 @@
 }
 
 .service-card p {
-    font-size: 0.9em;
+    font-size: 1.1rem;
     margin-bottom: 20px;
 }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .intro-services {
         margin-bottom: 0rem;
     }
@@ -63,13 +63,13 @@
     }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .services-grid {
         grid-template-columns: 1fr;
     }

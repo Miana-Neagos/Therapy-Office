@@ -9,7 +9,7 @@
   box-shadow: 20px -7px 10px 3px rgba(0, 123, 255, 0.5);
   border-radius: 15px;
   margin: 4rem 10rem;
-  color: #432b17;
+  color: #603f22;
 }
 
 .select-doc-p {
@@ -63,7 +63,7 @@
   font-size: 2rem;
   margin-top: 0.5rem;
   transition: color 0.3s ease-in-out;
-  color: #432b17;
+  color: #603f22;
 }
 
 .therapist-option:hover span {

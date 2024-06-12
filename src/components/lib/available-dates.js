@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid"; // nned to import "uuid" library to generate unique ID for each day entry
+import { v4 as uuidv4 } from "uuid"; // need to import "uuid" library to generate unique ID for each day entry
 
 //class to generate time slots for doc1 (Alina Salomie)
 export class doc1SlotGenerator {

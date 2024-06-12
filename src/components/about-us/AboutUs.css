@@ -8,6 +8,7 @@
     gap: 20px;
     width: 90%;
     opacity: 0.95;
+    color: #603f22;
   }
   
   .alina,
@@ -18,13 +19,13 @@
     align-items: center;
     margin: 20px;
     padding: 20px;
-    width: 38%;
+    width: 28%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 5px #d1ddd2;
   }
   
   .person-info {
-    width: 90%;
+    width: 100%;
     position: absolute;
     z-index: 1;
     top: 21%;
@@ -120,7 +121,7 @@
     margin-bottom: 0.7rem;
   }
 
-@media (max-width: 2000px) {  
+@media screen and (max-width: 3000px) {  
     .person-info {
       top: 9%;
       left: 80%;
@@ -147,7 +148,7 @@
     }
   }
 
-  @media (max-width: 1600px) {
+  @media screen and (max-width: 2100px) {
     .person-info {
       top: 5%;
       left: 80%;
@@ -183,7 +184,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1600px) {
     .alina,
     .andra {
       width: 70%;
@@ -198,8 +199,8 @@
     }
   
     .person-info {
-      width: 65%;
-      top: 0;
+      width: 43%;
+      top: 20%;
       left: 50%;
     }
   
@@ -208,11 +209,11 @@
     }
   
     .person-info h1 {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     .person-info p {
-      font-size: 0.85rem;
+      font-size: 0.9rem
     }
 
     .qualifications ul{

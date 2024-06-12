@@ -5,6 +5,7 @@
   padding: 1.25rem;
   gap: 2.5rem;
   margin: 2rem auto 6rem;
+  height: 5vh;
 }
 
 .quick-links div {
@@ -23,8 +24,8 @@
   justify-content: center;
   gap: 0.5rem; 
   background-color: #e3e6e4;
-  color: #7A7174;
-  border: 2px solid #ffac00a3;
+  color: #603f22;
+  border: none;
   border-radius: 1rem;
   padding: 1rem;
   font-size: 1.3rem;
@@ -34,35 +35,35 @@
   margin: 0.7rem;
   width: 19rem;
   background-image: linear-gradient(to bottom, #e3e6e4 0%, #b2b6b4 50%, #e3e6e4 100%);
-  transition: 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .quick-links button:hover {
   border: 2px solid #4a726c;
   background-color: #a2b594;
-  color: #fffaf8;
-  scale: 1.1;
-}
-
-
-
-/* .quick-links button {
-  width: 12.5rem;
-  height: 3rem;
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 0.5rem;
-  color: #4d321b;
-  cursor: pointer;
-  background: linear-gradient(359deg, #69635f, #c6c4c3);
-  transition: transform 0.3s ease-in-out;
-  box-shadow: 6px 11px 11px 0px #7d91756e;
-}
-
-.quick-links button:hover {
-  color: #ffffff;
+  color: #4a726c;
   transform: scale(1.1);
-  box-shadow: 6px 11px 11px 0px #c6c4c3;
-} */
+}
+
+@media screen and (min-width: 2700px) {
+  .quick-links {
+    gap: 8rem;
+  }
+
+  .quick-links button {
+    font-size: 1.5rem;
+    width: 21rem;
+  }
+}
+
+@media screen and (min-width: 2400px) and (max-width: 2800px) {
+  .quick-links {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 1490px)  {
+  .quick-links {
+    height: 15vh;
+  }
+}

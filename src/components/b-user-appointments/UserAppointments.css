@@ -5,14 +5,12 @@
     align-content: space-around;
     justify-content: flex-end;
     color: #7f7979;
-    /* max-height: 12rem; */
     flex-wrap: wrap;
     align-items: center;
     margin: 1.3rem auto;
     padding: 1.2rem;
     border-radius: 10px;
     box-shadow: inset 0px 8px 0px 2px #e7e7e8;
-    /* overflow-y: auto; */
 }
 
 .future-appts h3 {
@@ -28,8 +26,6 @@
     padding: 0;
     max-height: 9rem;
     overflow-y: auto;
-
-    /* text-align: center; */
 }
 
 .future-appts li {
@@ -40,7 +36,6 @@
     justify-content: space-between;
     align-items: center; 
     padding-right: 1rem;
-    /* font-weight: bold; */
 }
 
 .future-appts button {
