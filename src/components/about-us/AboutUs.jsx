@@ -115,9 +115,10 @@ function AboutUs() {
               Hello, I&apos;m <span className="name">Andra Costin</span>
             </h1>
             <p>
-              I have always been fascinated by human nature and sought answers
-              to questions like &apos;Why do we do what we &apos;do?&apos; and
-              &apos;Why do we feel what we feel?&apos;
+              I am fascinated by the complexity and resilience of human nature.
+              As a psychotherapist, I have witnessed many stories of courage and
+              transformation, which have taught me to appreciate even more the
+              inner strength that animates each of us.
             </p>
             <p>
               This curiosity led me from philosophy to coaching, and finally to
@@ -133,46 +134,47 @@ function AboutUs() {
             <div className="tool">
               <h3>1. My Curiosity</h3>
               <p>
-                I&apos;ve always been curious about why we act and feel the way
-                we do. This led me to psychology and psychotherapy.
+                I&apos;m fascinated by how people respond to life&apos;s
+                challenges.
               </p>
               <p>
-                Through study and research, I&apos;ve found answers and helped
-                others.
+                This curiosity shapes my therapy approach, where each session
+                reveals new insights into human strength and potential.
               </p>
             </div>
 
             <div className="tool">
               <h3>2. My Role</h3>
               <p>
-                As your therapist, I&apos;m here to support you. I&apos;ve seen
-                amazing changes and growth in my clients.
+                My role is to accompany you on your journey, whether it is
+                smooth or filled with obstacles.
               </p>
               <p>
-                I&apos;m committed to walking this path with you, offering the
-                support you need.
+                I am here to offer support, understanding, and a safe space
+                where you can express yourself freely and explore your emotions
+                and thoughts.
               </p>
             </div>
 
             <div className="tool">
               <h3>3. Support & Trust</h3>
               <p>
-                Trust and support are key in therapy. My goal is to create a
-                safe space where you feel comfortable sharing.
+                I strongly believe in creating a relationship based on mutual
+                trust and respect.
               </p>
               <p>
-                Together, we&apos;ll build trust and foster your growth and
-                healing.
+                I understand how important it is to feel safe when sharing
+                personal and delicate aspects of your life, and I am committed
+                to protecting this trust through professionalism and empathy.
               </p>
             </div>
 
             <div className="tool">
               <h3>4. Let&apos;s Talk!</h3>
               <p>
-                Are you on a journey of self-discovery and growth? I&apos;m here
-                to be by your side and support you.
+              If you feel you need a dialogue partner in your journey of self-discovery and growth, I encourage you to reach out to me. 
               </p>
-              <p>Reach out, and we&apos;ll find new ways for you to succeed.</p>
+              <p>Together, we can explore and navigate life&apos;s challenges, discovering new ways to adapt and thrive.</p>
             </div>
           </div>
         </div>
@@ -189,15 +191,6 @@ function AboutUs() {
               <strong>Clinical Psychologist</strong> – Training and
               certification at the Faculty of Psychology and Educational
               Sciences, UBB
-            </li>
-            <li>
-              <strong>Parenting Program Trainer</strong> – Training and
-              certification in the methodologies &quot;All About
-              Parenting,&quot; &quot;Parenting Apart&quot;
-            </li>
-            <li>
-              <strong>Coach</strong> – Training at &quot;Coaching Partners&quot;
-              school – accredited by the International Coaching Federation
             </li>
           </ul>
         </div>
