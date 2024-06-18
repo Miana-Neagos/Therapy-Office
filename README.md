@@ -6,6 +6,7 @@ This project is a comprehensive web application designed for a private practice 
 - **Online Booking**: Users can book therapy sessions online.
 - **Booking Management**: Users can view and delete their existing bookings.
 - **Contact Form**: A contact form is available for users to get in touch with the practice.
+- **Login - Register**
 - **Embedded YouTube Content**: Informative videos about therapy services are embedded within the site.
 
 The website aims to provide a user-friendly interface for clients to easily access therapy services, manage their appointments, and learn more about the practice.
