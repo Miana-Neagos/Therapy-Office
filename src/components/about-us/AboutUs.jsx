@@ -115,16 +115,14 @@ function AboutUs() {
               Hello, I&apos;m <span className="name">Andra Costin</span>
             </h1>
             <p>
-              I am fascinated by the complexity and resilience of human nature.
-              As a psychotherapist, I have witnessed many stories of courage and
-              transformation, which have taught me to appreciate even more the
-              inner strength that animates each of us.
+              I am deeply intrigued by the complexity and resilience of human
+              nature. As a psychotherapist, I have witnessed many stories of
+              courage and transformation. These experiences have deepened my
+              appreciation for the inner strength within each of us.
             </p>
             <p>
-              This curiosity led me from philosophy to coaching, and finally to
-              psychology and psychotherapy. Through extensive study and
-              research, I have found answers to these questions and helped
-              address the specific concerns people have.
+              Through my work, I continually learn about the remarkable capacity
+              for growth and healing that people possess.
             </p>
           </div>
         </div>
@@ -172,9 +170,13 @@ function AboutUs() {
             <div className="tool">
               <h3>4. Let&apos;s Talk!</h3>
               <p>
-              If you feel you need a dialogue partner in your journey of self-discovery and growth, I encourage you to reach out to me. 
+                If you feel you need a dialogue partner in your journey of
+                self-discovery and growth, I encourage you to reach out to me.
               </p>
-              <p>Together, we can explore and navigate life&apos;s challenges, discovering new ways to adapt and thrive.</p>
+              <p>
+                Together, we can explore and navigate life&apos;s challenges,
+                discovering new ways to adapt and thrive.
+              </p>
             </div>
           </div>
         </div>
