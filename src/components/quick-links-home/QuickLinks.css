@@ -28,12 +28,12 @@
   border: none;
   border-radius: 2rem;
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
   box-shadow: -5px 9px 7px 0px #7d9175;
   margin: 0.7rem;
-  width: 19rem;
+  width: 12rem;
   background-image: linear-gradient(to bottom, #e3e6e4 0%, #b2b6b4 50%, #e3e6e4 100%);
   transition: transform 0.2s ease-in-out;
 }

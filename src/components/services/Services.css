@@ -9,7 +9,7 @@
 }
 
 .intro-services {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     background-color: white;
     opacity: 0.75;
     padding: 1rem;
@@ -55,9 +55,9 @@
 }
 
 @media screen and (max-width: 1300px) {
-    .intro-services {
+    /* .intro-services {
         margin-bottom: 0rem;
-    }
+    } */
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
     }
